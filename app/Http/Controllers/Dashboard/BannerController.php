@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BannerController extends Controller
+class BannerController extends BaseController
 {
     /**
      * Display a listing of the resource.

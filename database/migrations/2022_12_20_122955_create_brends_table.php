@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('discription_ru');
             $table->string('discription_en');
             $table->string('link');
-            $table->string('brend_number');
+            $table->integer('brend_number')->nullable();
             $table->string('slug');
             $table->timestamps();
         });

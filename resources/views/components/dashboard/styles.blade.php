@@ -29,3 +29,4 @@
 <link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
 <!-- Responsive css-->
 <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">

@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('vacancies', function (Blueprint $table) {
             $table->id();
+            $table->string('name_uz');
+            $table->string('name_ru');
+            $table->string('name_en');
+            $table->string('discription_uz');
+            $table->string('discription_ru');
+            $table->string('discription_en');
+            $table->string('slug');
             $table->timestamps();
         });
     }

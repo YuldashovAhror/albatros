@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->integer('brend_id');
+            $table->string('photo');
+            $table->string('name_uz');
+            $table->string('name_ru');
+            $table->string('name_en');
+            $table->string('slug');
             $table->timestamps();
         });
     }

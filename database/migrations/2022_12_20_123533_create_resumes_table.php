@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('resumes', function (Blueprint $table) {
             $table->id();
+            $table->integer('vacancy_id');
+            $table->string('number');
+            $table->string('name');
+            $table->string('file');
             $table->timestamps();
         });
     }

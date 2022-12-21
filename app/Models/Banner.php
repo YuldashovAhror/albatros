@@ -14,4 +14,9 @@ class Banner extends Model
         'photo',
         'mobile_photo',
     ];
+
+    public function products()
+    {
+        return $this->belongsTo(Product::class, 'product_id');
+    }
 }

@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Feedback extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'product_id',
+        'name',
+        'file',
+    ];
+
+    public function products()
+    {
+        return $this->belongsTo(ProjectStatus::class, 'product_id');
+    }
 }

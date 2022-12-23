@@ -3,6 +3,9 @@
 use App\Http\Controllers\Dashboard\BannerController;
 use App\Http\Controllers\Dashboard\BrendController;
 use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\NewsCategoryController;
+use App\Http\Controllers\Dashboard\NewsController;
+use App\Http\Controllers\Dashboard\ProductController;
 use Illuminate\Support\Facades\Route;
 
 //Localization
@@ -26,6 +29,9 @@ Route::group(['prefix' => 'dashboard'], function (){
         Route::resource('/brend', BrendController::class);
         Route::resource('/banner', BannerController::class);
         Route::resource('/category', CategoryController::class);
+        Route::resource('/newcategory', NewsCategoryController::class);
+        Route::resource('/news', NewsController::class);
+        Route::resource('/product', ProductController::class);
     });
 });
 

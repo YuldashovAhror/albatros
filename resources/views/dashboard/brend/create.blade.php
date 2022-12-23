@@ -1,18 +1,11 @@
 @extends('layouts.dashboard.main')
 @section('content')
-{{-- @dd('asd') --}}
 <div class="col-sm-6" style="padding-top: 2rem; padding-bottom: 1.5rem">
     <h3>Бренд </h3>
 </div>
 <div class="card">
     <div class="card-header pb-0">
         <h5>Добавить</h5>
-        {{-- @if(Session::has('message'))
-        Success
-        @endif --}}
-        {{-- <div class="alert alert-secondary" role="alert">
-            This is a primary alert—check it out!
-        </div> --}}
     </div>
     <div class="card-body">
         <form action="{{route('dashboard.brend.store')}}" method="POST" enctype="multipart/form-data">

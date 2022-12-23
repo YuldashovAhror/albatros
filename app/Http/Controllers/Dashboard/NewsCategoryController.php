@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\NewsCategory;
 use Illuminate\Http\Request;
 
 class NewsCategoryController extends BaseController
@@ -14,7 +15,10 @@ class NewsCategoryController extends BaseController
      */
     public function index()
     {
-        //
+        $newscats = NewsCategory::all();
+        return view('dashboard.newscat.index',[
+            'newscats'=>$newscats
+        ]);
     }
 
     /**
@@ -35,7 +39,15 @@ class NewsCategoryController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        $newscat = new NewsCategory();
+        
+        $newscat->name_uz = $request->name_uz;
+        $newscat->name_ru = $request->name_ru;
+        $newscat->name_en = $request->name_en;
+
+        $newscat->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -57,7 +69,10 @@ class NewsCategoryController extends BaseController
      */
     public function edit($id)
     {
-        //
+        $newscat = NewsCategory::find($id);
+        return view('dashboard.newscat.edit', [
+            'newscat'=>$newscat
+        ]);
     }
 
     /**
@@ -69,7 +84,15 @@ class NewsCategoryController extends BaseController
      */
     public function update(Request $request, $id)
     {
-        //
+        $newscat = NewsCategory::find($id);
+        
+        $newscat->name_uz = $request->name_uz;
+        $newscat->name_ru = $request->name_ru;
+        $newscat->name_en = $request->name_en;
+
+        $newscat->save();
+
+        return redirect()->route('dashboard.newcategory.index');
     }
 
     /**
@@ -80,6 +103,8 @@ class NewsCategoryController extends BaseController
      */
     public function destroy($id)
     {
-        //
+        $newscat = NewsCategory::find($id);
+        $newscat->delete();
+        return redirect()->back();
     }
 }

@@ -46,6 +46,8 @@
                                 <li><a href="{{route('dashboard.news.create')}}">Создать</a></li>
                             </ul>
                         </li>
+
+                        <li ><a class="nav-link" href="{{route('dashboard.partners.index')}}"><i data-feather="home"></i><span>Партнеры</span></a>
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

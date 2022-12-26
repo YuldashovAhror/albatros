@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class PartnerController extends BaseController
@@ -13,8 +14,11 @@ class PartnerController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    { 
+        $partners = Partner::all();
+        return view('dashboard.partners.index', [
+            'partners' =>$partners
+        ]);
     }
 
     /**
@@ -35,7 +39,13 @@ class PartnerController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        $partners = new Partner;
+
+        if($request->file('photo')){
+            $partners['photo'] = $this->photoSave($request->file('photo'), 'image/partners');
+        }
+        $partners->save();
+        return redirect()->route('dashboard.partners.index');
     }
 
     /**
@@ -57,7 +67,10 @@ class PartnerController extends BaseController
      */
     public function edit($id)
     {
-        //
+        $partner = Partner::find($id); 
+        return view('dashboard.partners.edit', [
+            'partner' =>$partner
+        ]);
     }
 
     /**
@@ -69,7 +82,15 @@ class PartnerController extends BaseController
      */
     public function update(Request $request, $id)
     {
-        //
+        $partner = Partner::find($id); 
+        if($request->file('photo')){
+            if(is_file(public_path($partner->photo))){
+                unlink(public_path($partner->photo));
+            }
+            $partner['photo'] = $this->photoSave($request->file('photo'), 'image/partners');
+        }
+        $partner->save();
+        return redirect()->route('dashboard.partners.index');
     }
 
     /**
@@ -80,6 +101,13 @@ class PartnerController extends BaseController
      */
     public function destroy($id)
     {
-        //
+        $partner = Partner::find($id);
+        if(is_file(public_path($partner->photo))){
+            unlink(public_path($partner->photo));
+        }
+
+        $partner->delete();
+
+        return redirect()->back();
     }
 }

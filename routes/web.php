@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\BrendController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\NewsCategoryController;
 use App\Http\Controllers\Dashboard\NewsController;
+use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,7 @@ Route::group(['prefix' => 'dashboard'], function (){
         Route::resource('/newcategory', NewsCategoryController::class);
         Route::resource('/news', NewsController::class);
         Route::resource('/product', ProductController::class);
+        Route::resource('/partners', PartnerController::class);
     });
 });
 

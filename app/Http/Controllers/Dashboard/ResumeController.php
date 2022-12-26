@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Resume;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class ResumeController extends BaseController
 {
@@ -14,7 +17,7 @@ class ResumeController extends BaseController
      */
     public function index()
     {
-        //
+        return view('dashboard.resume.index');
     }
 
     /**
@@ -35,7 +38,17 @@ class ResumeController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        $resume = new Resume();
+
+        if($request->file('file')){
+            $resume['file'] = $this->photoSave($request->file('file'), 'image/resume');
+        }
+        $resume->name = $request->name;
+        $resume->number = $request->number;
+        $resume->vacancy_id = $request->vacancy;
+        
+        $resume->save();
+        return redirect()->back();
     }
 
     /**

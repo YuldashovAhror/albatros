@@ -12,13 +12,14 @@
             </p>
             <form action="#" class="feedback-form form">
                 <div class="form__wrap">
-                    <input type="tel" class="form__tel" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$" inputmode="text">
+                    <input type="tel" class="form__tel" id="phone" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$" inputmode="text">
+                    <input id="token" value="{{ csrf_token() }}" type="hidden">
                 </div>
-                <input type="text" class="form__name" required="" placeholder="Как вас зовут?">
+                <input type="text" class="form__name" id="first_name" required="" placeholder="Как вас зовут?">
                 <p class="feedback__text">
                     Нажимая кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
                 </p>
-                <button type="submit" class="form__btn btn">
+                <button type="submit" onclick="send()" class="form__btn btn">
                     Отправить заявку
                 </button>
             </form>
@@ -32,7 +33,38 @@
                 Наши менеджеры обязательно свяжутся с Вами 
                 и ответят на все Ваши вопросы.
             </p>
-            <a href="index.html" class="form__btn btn">На главную</a>
+            <a href="/
+            " class="form__btn btn">На главную</a>
         </div>
     </div>
 </div>
+
+<script>
+    function send() {
+        let token = $("#token").val();
+        let name = $('#first_name').val();
+        let phone = $('#phone').val();
+        // let department_id = $('#contact').val();
+        
+        $.ajax({
+            token: token,
+            type: "get",
+            url: "/dashboard/feedback/store",
+            data: {
+                name: name,
+                phone: phone,
+                // department_id: department_id,
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+        setTimeout(() => {
+            $('.feedback-content').hide()
+            $('.feedback-done').show()
+            $("#name").val('');
+            $("#phone").val('');
+            // $("#contact").val('');
+        }, 1000)
+        
+    }
+</script>

@@ -3,10 +3,15 @@
 use App\Http\Controllers\Dashboard\BannerController;
 use App\Http\Controllers\Dashboard\BrendController;
 use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\FeedbackController;
+use App\Http\Controllers\Dashboard\InfoCategoryController;
+use App\Http\Controllers\Dashboard\InformationController;
 use App\Http\Controllers\Dashboard\NewsCategoryController;
 use App\Http\Controllers\Dashboard\NewsController;
 use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\ProductController;
+use App\Http\Controllers\Dashboard\ResumeController;
+use App\Http\Controllers\Dashboard\VacancyController;
 use Illuminate\Support\Facades\Route;
 
 //Localization
@@ -34,8 +39,20 @@ Route::group(['prefix' => 'dashboard'], function (){
         Route::resource('/news', NewsController::class);
         Route::resource('/product', ProductController::class);
         Route::resource('/partners', PartnerController::class);
+        Route::resource('/vacancy', VacancyController::class);
+        Route::resource('/resume', ResumeController::class);
+        Route::resource('/infocat', InfoCategoryController::class);
+        Route::resource('/info', InformationController::class);
+        Route::get('/feedback/store', [FeedbackController::class, 'store']);
+        Route::post('/feedback/contacts', [FeedbackController::class, 'store']);
+        
     });
 });
 
+////// Front ////
+
+Route::get('/about', function(){
+    return view('front.about');
+});
 
 require __DIR__.'/auth.php';

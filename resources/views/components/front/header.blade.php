@@ -20,13 +20,13 @@
     <div class="header-nav">
         <div class="container">
             <div class="header-nav__logo">
-                <a href="index.html">
+                <a href="{{route('main')}}">
                     <img src="img/logo.svg" alt="Albatros">
                 </a>
             </div>
             <ul class="header-nav__menu menu">
                 <li class="menu__item">
-                    <a href="#" class="menu__link menu__link-current">
+                    <a href="{{route('main')}}" class="menu__link menu__link-current">
                         Главная
                     </a>
                 </li>
@@ -52,7 +52,7 @@
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">
+                    <a href="/about" class="menu__link">
                         О компании
                     </a>
                 </li>

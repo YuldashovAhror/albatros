@@ -40,14 +40,37 @@
 
                     <li ><a class="nav-link" href="{{route('dashboard.newcategory.index')}}"><i data-feather="home"></i><span>Категория новостей</span></a>
 
-                        <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Новости</span></a>
-                            <ul class="nav-submenu menu-content">
-                                <li><a href="{{route('dashboard.news.index')}}">Лист</a></li>
-                                <li><a href="{{route('dashboard.news.create')}}">Создать</a></li>
-                            </ul>
-                        </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Новости</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{route('dashboard.news.index')}}">Лист</a></li>
+                            <li><a href="{{route('dashboard.news.create')}}">Создать</a></li>
+                        </ul>
+                    </li>
 
-                        <li ><a class="nav-link" href="{{route('dashboard.partners.index')}}"><i data-feather="home"></i><span>Партнеры</span></a>
+                    <li ><a class="nav-link" href="{{route('dashboard.partners.index')}}"><i data-feather="home"></i><span>Партнеры</span></a>
+
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Вакансия</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{route('dashboard.vacancy.index')}}">Лист</a></li>
+                            <li><a href="{{route('dashboard.vacancy.create')}}">Создать</a></li>
+                        </ul>
+                    </li>   
+
+                    <li ><a class="nav-link" href="{{route('dashboard.resume.index')}}"><i data-feather="home"></i><span>Продолжить</span></a> 
+                    
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Инфо_категория</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{route('dashboard.infocat.index')}}">Лист</a></li>
+                            <li><a href="{{route('dashboard.infocat.create')}}">Создать</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Информация</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{route('dashboard.info.index')}}">Лист</a></li>
+                            <li><a href="{{route('dashboard.info.create')}}">Создать</a></li>
+                        </ul>
+                    </li> 
+                    <li ><a class="nav-link" href="{{route('dashboard.feedback.index')}}"><i data-feather="home"></i><span>Обратная связь</span></a>      
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="" type="image/x-icon">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/main.css">
-	<title>Albatros</title>
-</head>
-<body>
-	
+@extends('layouts.front.main')
+@section('content')
 	<div class="feedback">
 		<div class="feedback-content">
 			<span class="feedback__close">
@@ -32,16 +19,15 @@
 				<p class="feedback__text">
 					Нажимая кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
 				</p>
-				<button type="submit" class="form__btn btn">
+				<button type="submit" class="form__btn btn" >
+
+					{{-- onclick="choose({{ $vacan->id }})" --}}
 					Отправить заявку
 				</button>
 			</form>
 		</div>
 	</div>
-
-
 	<!-- CHANGE попап вакансий-->
-
 	<div class="feedback-vacancy">
 		<div class="feedback-content">
 			<div class="feedback-wrap">
@@ -58,16 +44,17 @@
 				<h3 class="feedback__subtitle">
 					Контактные данные
 				</h3>
-				<form action="#" class="feedback-form form">
+				<form action="{{route('dashboard.vacancy.store')}}" method="POST" enctype="multipart/form-data" class="feedback-form form">
+					@csrf
 					<div class="form__wrap">
-						<input type="tel" class="form__tel" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$">
+						<input type="tel" class="form__tel" name="number" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$">
 					</div>
-					<input type="text" class="form__name" required placeholder="Как вас зовут?">
+					<input type="text" name="name" class="form__name" required placeholder="Как вас зовут?">
 					<h3 class="feedback__subtitle">
 						Загрузить резюме
 					</h3>
 					<div class="form-file__wrap">
-						<input type="file" name="file1" id="file1" onchange="uploadFile()">
+						<input type="file" name="file1" id="file" onchange="uploadFile()">
 					</div>
 					<button type="submit" class="form__btn btn">
 						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +85,7 @@
 		<img src="" alt="img">
 	</div>
 
-	<div class="mobile-menu">
+	{{-- <div class="mobile-menu">
 		<div class="mobile-menu__wrap">
 			<ul>
 				<li>
@@ -127,82 +114,7 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-
-	<header class="header">
-		<div class="header-logos">
-			<div class="container">
-				<img src="img/snibe.svg" alt="ico" class="header-logos__img">
-				<img src="img/bd.svg" alt="ico" class="header-logos__img">
-				<img src="img/bioquell.svg" alt="ico" class="header-logos__img">
-				<img src="img/qiagen.svg" alt="ico" class="header-logos__img">
-				<img src="img/werfen.svg" alt="ico" class="header-logos__img">
-				<img src="img/randox.svg" alt="ico" class="header-logos__img">
-				<img src="img/dymind.svg" alt="ico" class="header-logos__img">
-				<div class="header-logos__time">
-					Пн. – Пт.: с 09:00 до 18:00
-				</div>
-				<div class="header-logos__tel">
-					<img src="img/tel.svg" alt="ico">
-					<span>+998(78) 150 06 88</span>
-				</div>
-			</div>
-		</div>
-		<div class="header-nav">
-			<div class="container">
-				<div class="header-nav__logo">
-					<a href="index.html">
-						<img src="img/logo.svg" alt="Albatros">
-					</a>
-				</div>
-				<ul class="header-nav__menu menu">
-					<li class="menu__item">
-						<a href="#" class="menu__link menu__link-current">
-							Главная
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							Каталог
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							События и семинары
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							Партнёры
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							База знаний
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							О компании
-						</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">
-							Контакты
-						</a>
-					</li>
-				</ul>
-				<a href="#" class="header-nav__btn btn">
-					Заказать звонок
-				</a>
-				<div class="header-nav__mobi">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-	</header>
+	</div> --}}
 
 	<div class="offer">
 		<div class="container">
@@ -218,21 +130,7 @@
 		<img src="img/tel-popup.svg" alt="ico">
 	</span>
 
-	<div class="sidemenu">
-		<div class="sidemenu__lang">
-			<a href="#" >RU</a>
-			<a href="#" >UZ</a>
-			<a href="#" >EN</a>
-		</div>
-		<div class="sidemenu__search">
-			<img src="img/search.svg" alt="ico">
-			<input type="text">
-		</div>
-		<a href="#" class="sidemenu__cabinet">
-			<img src="img/cabinet.svg" alt="ico">
-			<span>Личный кабинет</span>
-		</a>
-	</div>
+	
 
 	<section class="about-main">
 		
@@ -1501,131 +1399,4 @@
 
 
 	</section>
-	
-	
-	<footer class="footer">
-		<div class="footer-contact">
-			<div class="container">
-				<div class="footer-main">
-					<div class="footer-logo">
-						<a href="index.html">
-							<img src="img/logo.svg" alt="Albatros">
-						</a>
-					</div>
-					<div class="footer-wrap">
-						<div>
-							<div class="footer-info">
-								<img src="img/marker.svg" alt="ico">
-								<p>39 улица М. Массона, Ташкент</p>
-							</div>
-							<div class="footer-tel">
-								<img src="img/tel-round.svg" alt="ico">
-								<div>
-									<p>
-										<span>+998 78 152 02 22</span> Головной офис
-									</p>
-									<p>
-										<span>+998 78 153 03 23</span> Отдел снабжения
-									</p>
-									<p>
-										<span>+998 78 154 04 24</span> Бухгалтерия
-									</p>
-								</div>
-							</div>
-							<div class="footer-info">
-								<img src="img/time.svg" alt="ico">
-								<p>8:00 - 19:30 <br>
-									Ежедневно</p>
-							</div>
-							<div class="footer-info">
-								<img src="img/mail.svg" alt="ico">
-								<p>info@ahc.uz</p>
-							</div>
-						</div>
-						<div>
-							<div class="footer-title">
-								Карта сайта
-							</div>
-							<ul class="footer-menu">
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										Главная
-									</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										Каталог
-									</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										О компании
-									</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										Партнёры
-									</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										События и семинары
-									</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										База знаний
-									</a>
-								</li>
-								<li class="footer-menu__item">
-									<a href="#" class="footer-menu__link">
-										Контакты
-									</a>
-								</li>
-							</ul>
-							<div class="footer-title">
-								Следите за нами в социальных сетях:
-							</div>
-							<ul class="footer-follow">
-								<li class="footer-follow__item">
-									<a href="#" class="footer-follow__link">
-										<img src="img/telegram.svg" target="_blank" alt="ico">
-									</a>
-								</li>
-								<li class="footer-follow__item">
-									<a href="#" class="footer-follow__link">
-										<img src="img/instagram.svg" target="_blank" alt="ico">
-									</a>
-								</li>
-								<li class="footer-follow__item">
-									<a href="#" class="footer-follow__link">
-										<img src="img/facebook.svg" target="_blank" alt="ico">
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer-top">
-						<i class="fa fa-chevron-up"></i>
-					</div>
-				</div>
-			</div>
-			<div class="footer-map" id="map"></div>
-		</div>
-		<div class="footer-copy">
-			<div class="container">
-				<p>2021 &copy; Albatros Health Care. </p>
-			<p class="footer-copy__abs">Политика конфиденциальности</p>
-			<p><span>Разработано в</span> <a href="http://novastudio.uz/" target="_blank"> <img src="img/nova.svg" alt=""> </a></p>
-			</div>
-		</div>
-	</footer>
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/jquery.inputmask.min.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script src="js/map.js"></script>
-	<script src="js/main.js"></script>
-</body>
-</html>
+@endsection

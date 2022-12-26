@@ -10,7 +10,6 @@
     <div class="card-body">
         <form action="{{route('dashboard.news.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            
             <div class="row g-4">
                 <div class="col-md-4">
                     <label class="form-label" >Название статуса</label>

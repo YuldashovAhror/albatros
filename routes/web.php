@@ -43,6 +43,7 @@ Route::group(['prefix' => 'dashboard'], function (){
         Route::resource('/resume', ResumeController::class);
         Route::resource('/infocat', InfoCategoryController::class);
         Route::resource('/info', InformationController::class);
+        Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
         Route::get('/feedback/store', [FeedbackController::class, 'store']);
         Route::post('/feedback/contacts', [FeedbackController::class, 'store']);
         
@@ -50,9 +51,22 @@ Route::group(['prefix' => 'dashboard'], function (){
 });
 
 ////// Front ////
-
 Route::get('/about', function(){
     return view('front.about');
 });
-
+Route::get('/catalog', function(){
+    return view('front.catalog');
+});
+Route::get('/contact', function(){
+    return view('front.contact');
+});
+Route::get('/event', function(){
+    return view('front.events');
+});
+Route::get('/partners', function(){
+    return view('front.partners');
+});
+Route::get('/info', function(){
+    return view('front.knowledge');
+});
 require __DIR__.'/auth.php';

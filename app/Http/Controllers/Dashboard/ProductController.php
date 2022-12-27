@@ -14,7 +14,7 @@ class ProductController extends BaseController
      */
     public function index()
     {
-        //
+        return view('dashboard.product.create');
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductController extends BaseController
      */
     public function create()
     {
-        //
+        return view('dashboard.product.create');
     }
 
     /**

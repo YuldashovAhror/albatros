@@ -18,6 +18,8 @@
 @include('components.front.feedback')
 @include('components.front.sidebar')
 @yield('content')
+@if(\Request::segment(1) != 'contact' )  
 @include('components.front.footer')
+@endif
 @include('components.front.scripts')
 </body>

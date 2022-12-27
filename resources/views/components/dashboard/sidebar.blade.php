@@ -37,6 +37,13 @@
                             <li><a href="{{route('dashboard.category.create')}}">Создать</a></li>
                         </ul>
                     </li>
+                    
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Продукты</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{route('dashboard.product.index')}}">Лист</a></li>
+                            <li><a href="{{route('dashboard.product.create')}}">Создать</a></li>
+                        </ul>
+                    </li>
 
                     <li ><a class="nav-link" href="{{route('dashboard.newcategory.index')}}"><i data-feather="home"></i><span>Категория новостей</span></a>
 

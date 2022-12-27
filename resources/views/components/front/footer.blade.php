@@ -3,7 +3,7 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-logo">
-                    <a href="index.html">
+                    <a href="{{route('main')}}">
                         <img src="/img/logo.svg" alt="Albatros">
                     </a>
                 </div>
@@ -43,37 +43,37 @@
                         </div>
                         <ul class="footer-menu">
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="/" class="footer-menu__link">
                                     Главная
                                 </a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="catalog" class="footer-menu__link">
                                     Каталог
                                 </a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="/about" class="footer-menu__link">
                                     О компании
                                 </a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="/partners" class="footer-menu__link">
                                     Партнёры
                                 </a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="event" class="footer-menu__link">
                                     События и семинары
                                 </a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="/info" class="footer-menu__link">
                                     База знаний
                                 </a>
                             </li>
                             <li class="footer-menu__item">
-                                <a href="#" class="footer-menu__link">
+                                <a href="contact" class="footer-menu__link">
                                     Контакты
                                 </a>
                             </li>

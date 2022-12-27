@@ -26,38 +26,38 @@
             </div>
             <ul class="header-nav__menu menu">
                 <li class="menu__item">
-                    <a href="{{route('main')}}" class="menu__link menu__link-current">
+                    <a href="{{route('main')}}" class="menu__link  @if(\Request::segment(1) == '') menu__link-current @endif">
                         Главная
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">
+                    <a href="/catalog"  class="menu__link @if(\Request::segment(1) == 'catalog') menu__link-current @endif">
                         Каталог
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">
+                    <a href="/event" class="menu__link @if(\Request::segment(1) == 'event') menu__link-current @endif">
                         События и семинары
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">
+                    <a href="/partners" class="menu__link @if(\Request::segment(1) == 'partners') menu__link-current @endif">
                         Партнёры
                     </a>
                 </li>
                 <!-- CHANGE класс добавил для открытия попапа dev-open-->
                 <li class="menu__item">
-                    <a href="#" class="menu__link dev-open">
+                    <a href="/info" class="menu__link @if(\Request::segment(1) == 'info') menu__link-current @endif">
                         База знаний
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="/about" class="menu__link">
+                    <a href="/about" class="menu__link @if(\Request::segment(1) == 'about') menu__link-current @endif">
                         О компании
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">
+                    <a href="/contact" class=" menu__link @if(\Request::segment(1) == 'contact') menu__link-current @endif">
                         Контакты
                     </a>
                 </li>

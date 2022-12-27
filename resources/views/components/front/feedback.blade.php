@@ -10,6 +10,7 @@
             <p class="feedback__text">
                 Оставьте ваши координаты и мы свяжемся с вами в ближайшее время
             </p>
+
             <form action="#" class="feedback-form form">
                 <div class="form__wrap">
                     <input type="tel" class="form__tel" id="phone" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$" inputmode="text">
@@ -19,10 +20,11 @@
                 <p class="feedback__text">
                     Нажимая кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
                 </p>
-                <button type="submit" onclick="send()" class="form__btn btn">
+                <button type="submit" id="button" onclick="send()" class="form__btn btn">
                     Отправить заявку
                 </button>
             </form>
+
         </div>
         <div class="feedback-done">
             <img src="img/done.svg" alt="ico">
@@ -33,14 +35,14 @@
                 Наши менеджеры обязательно свяжутся с Вами 
                 и ответят на все Ваши вопросы.
             </p>
-            <a href="/
-            " class="form__btn btn">На главную</a>
+            <a href="#" class="form__btn btn">На главную</a>
         </div>
     </div>
 </div>
 
 <script>
     function send() {
+        // console.log("Hello world!");
         let token = $("#token").val();
         let name = $('#first_name').val();
         let phone = $('#phone').val();

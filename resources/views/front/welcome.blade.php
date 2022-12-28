@@ -78,8 +78,8 @@
 						</div>
 					</div>
 					<div class="main-item__img">
-						<img data-src="img/main1.png" alt="item" class="main-item__img-desc lazy">
-						<img data-src="img/main1-mobile.png" alt="item" class="main-item__img-mobi lazy">
+						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
+						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
 			</div>
@@ -104,8 +104,8 @@
 						</div>
 					</div>
 					<div class="main-item__img">
-						<img data-src="img/main1.png" alt="item" class="main-item__img-desc lazy">
-						<img data-src="img/main1-mobile.png" alt="item" class="main-item__img-mobi lazy">
+						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
+						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
 			</div>
@@ -130,8 +130,8 @@
 						</div>
 					</div>
 					<div class="main-item__img">
-						<img data-src="img/main1.png" alt="item" class="main-item__img-desc lazy">
-						<img data-src="img/main1-mobile.png" alt="item" class="main-item__img-mobi lazy">
+						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
+						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
 			</div>
@@ -156,8 +156,8 @@
 						</div>
 					</div>
 					<div class="main-item__img">
-						<img data-src="img/main1.png" alt="item" class="main-item__img-desc lazy">
-						<img data-src="img/main1-mobile.png" alt="item" class="main-item__img-mobi lazy">
+						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
+						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
 			</div>
@@ -182,8 +182,8 @@
 						</div>
 					</div>
 					<div class="main-item__img">
-						<img data-src="img/main1.png" alt="item" class="main-item__img-desc owl-lazy">
-						<img data-src="img/main1-mobile.png" alt="item" class="main-item__img-mobi owl-lazy">
+						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
+						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
 			</div>
@@ -208,8 +208,8 @@
 						</div>
 					</div>
 					<div class="main-item__img">
-						<img data-src="img/main1.png" alt="item" class="main-item__img-desc owl-lazy">
-						<img data-src="img/main1-mobile.png" alt="item" class="main-item__img-mobi owl-lazy">
+						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
+						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
 			</div>
@@ -230,7 +230,7 @@
 					О компании
 				</h2>
 				<p class="section__text about__text">
-					С 1998 года мы занимаемся поставками и продажей медицинского оборудования, медицинской мебели, инструментов и расходного материала. Мы предлагаем полный цикл услуг – от проектирования и строительства ЛПУ, первичных консультаций до внедрения медицинских технологий, в том числе сопровождение, сервисное обслуживание и обучение персонала заказчика.
+					С 2017 года мы занимаемся поставками и продажей медицинского оборудования, медицинской мебели, инструментов и расходного материала. Мы предлагаем полный цикл услуг – от проектирования и строительства ЛПУ, первичных консультаций до внедрения медицинских технологий, в том числе сопровождение, сервисное обслуживание и обучение персонала заказчика.
 				</p>
 				<div class="about-info">
 					<div class="about-info__item">
@@ -273,7 +273,7 @@
 			<div class="category-main">
 				<a href="#" class="category-item">
 					<div class="category-item__img">
-						<img src="img/cat1.png" alt="category">
+						<img src="/img/cat1.png" alt="category">
 					</div>
 					<p class="category-item__text">
 						ИХЛА
@@ -281,7 +281,7 @@
 				</a>
 				<a href="#" class="category-item">
 					<div class="category-item__img">
-						<img src="img/cat2.png" alt="category">
+						<img src="/img/cat2.png" alt="category">
 					</div>
 					<p class="category-item__text">
 						Гемостаз
@@ -303,7 +303,7 @@
 						Гематология
 					</p>
 				</a>
-				<a href="#" class="category-item category-item__dual">
+				<a href="#" class="category-item">
 					<div class="category-item__img">
 						<img src="img/cat5.png" alt="category">
 					</div>
@@ -311,7 +311,23 @@
 						Реагенты ИХЛА
 					</p>
 				</a>
-				<a href="#" class="category-item category-item__dual">
+				<a href="#" class="category-item">
+					<div class="category-item__img">
+						<img src="img/cat6.png" alt="category">
+					</div>
+					<p class="category-item__text">
+						ПЦР-тесты
+					</p>
+				</a>
+				<a href="#" class="category-item">
+					<div class="category-item__img">
+						<img src="img/cat5.png" alt="category">
+					</div>
+					<p class="category-item__text">
+						Реагенты ИХЛА
+					</p>
+				</a>
+				<a href="#" class="category-item">
 					<div class="category-item__img">
 						<img src="img/cat6.png" alt="category">
 					</div>
@@ -1170,16 +1186,6 @@
 					<img src="img/partners7.png" alt="ico">
 					<img src="img/partners5.png" alt="ico">
 					<img src="img/partners8.png" alt="ico">
-					<img src="img/partners9.png" alt="ico">
-					<img src="img/partners10.png" alt="ico">
-					<img src="img/partners1.png" alt="ico">
-					<img src="img/partners4.png" alt="ico">
-					<img src="img/partners3.png" alt="ico">
-					<img src="img/partners2.png" alt="ico">
-					<img src="img/partners1.png" alt="ico">
-					<img src="img/partners2.png" alt="ico">
-					<img src="img/partners7.png" alt="ico">
-					<img src="img/partners5.png" alt="ico">
 					<a href="#" class="partners__link">Еще 40+</a>
 				</div>
 			</div>

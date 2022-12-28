@@ -1,13 +1,33 @@
 <header class="header">
     <div class="header-logos">
         <div class="container">
-            <img src="/img/snibe.svg" alt="ico" class="header-logos__img">
-            <img src="/img/bd.svg" alt="ico" class="header-logos__img">
-            <img src="/img/bioquell.svg" alt="ico" class="header-logos__img">
-            <img src="/img/qiagen.svg" alt="ico" class="header-logos__img">
-            <img src="/img/werfen.svg" alt="ico" class="header-logos__img">
-            <img src="/img/randox.svg" alt="ico" class="header-logos__img">
-            <img src="/img/dymind.svg" alt="ico" class="header-logos__img">
+            <a href="#">
+                <img src="/img/snibe.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/bd.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/bioquell.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/qiagen.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/werfen.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/randox.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/dymind.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/randox.svg" alt="ico" class="header-logos__img">
+            </a>
+            <a href="#">
+                <img src="/img/dymind.svg" alt="ico" class="header-logos__img">
+            </a>
             <div class="header-logos__time">
                 Пн. – Пт.: с 09:00 до 18:00
             </div>
@@ -63,7 +83,7 @@
                 </li>
             </ul>
             <a href="#" class="header-nav__btn btn">
-                Заказать звонок
+                Скачать прайс
             </a>
             <div class="header-nav__mobi">
                 <span></span>

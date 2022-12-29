@@ -23,7 +23,7 @@
                 <div class="col-md-4 mb-3">
                     <label class="form-label" for="brend_number">Номер марки</label>
                     <div class="input-group">
-                        <input class="form-control" name="brend_number" id="brend_number" type="number" placeholder="..." aria-describedby="inputGroupPrepend2"  value="{{$brend->brend_number}}">
+                        <input class="form-control" name="brend_number" id="brend_number" type="number" placeholder="..." aria-describedby="inputGroupPrepend2" min="1" max="9"  value="{{$brend->brend_number}}">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">

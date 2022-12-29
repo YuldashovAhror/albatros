@@ -18,7 +18,7 @@
                 <div class="col-md-4 mb-3">
                     <label class="form-label" for="brend_number">Номер марки</label>
                     <div class="input-group">
-                        <input class="form-control" name="brend_number" id="brend_number" type="number" placeholder="..." aria-describedby="inputGroupPrepend2" value="">
+                        <input class="form-control" name="brend_number" id="brend_number" type="number" placeholder="..." aria-describedby="inputGroupPrepend2" min="1" max="9" value="">
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -31,7 +31,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <label class="form-label" for="name_uz">Название Uz</label>
-                    <input class="form-control" name="name_uz" id="name_uz" type="text" placeholder="..." required="" min="2000" max="2099" value="">
+                    <input class="form-control" name="name_uz" id="name_uz" type="text" placeholder="..." required="" value="">
                 </div>
                 <div class="col-md-4">
                     <label class="form-label" for="name_ru">Название Ru</label>

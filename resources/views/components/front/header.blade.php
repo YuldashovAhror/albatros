@@ -1,10 +1,16 @@
 <header class="header">
     <div class="header-logos">
         <div class="container">
+            {{-- <?php
+                $brends = App\Models\Brand::orderBy('brand_number')->take()->get();
+                ?>
+                @dd($brends)
+            @foreach ($brends as $brend)
             <a href="#">
-                <img src="/img/snibe.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
+                <img src="{{$brend->photo}}" alt="ico" class="header-logos__img">                    
+            </a>  
+            @endforeach --}}
+            {{-- <a href="#">
                 <img src="/img/bd.svg" alt="ico" class="header-logos__img">
             </a>
             <a href="#">
@@ -27,7 +33,7 @@
             </a>
             <a href="#">
                 <img src="/img/dymind.svg" alt="ico" class="header-logos__img">
-            </a>
+            </a> --}}
             <div class="header-logos__time">
                 Пн. – Пт.: с 09:00 до 18:00
             </div>

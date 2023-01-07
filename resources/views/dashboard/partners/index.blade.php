@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @section('content')
 <div class="col-sm-6" style="padding-top: 2rem; padding-bottom: 1.5rem">
-    <h3>Категория новостей </h3>
+    <h3>Партнеры </h3>
 </div>
 {{-- @dd($newscats) --}}
 <div class="card">
@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="col-sm-6" style="padding-top: 2rem; padding-bottom: 1.5rem">
-    <h3>Статус Список</h3>
+    <h3>Партнеры Список</h3>
 </div>
 <div class="container-fluid">
     <div class="row">

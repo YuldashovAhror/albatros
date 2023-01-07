@@ -47,43 +47,39 @@
 				<img src="" alt="ico">
 			</div>
 			<div class="partners-popup__text">
-
-
 			</div>
 		</div>
 	</div>
-	{{-- <a href="tel:+998946666987" class="tel-popup">
-		<img src="img/tel-popup.svg" alt="ico">
-	</a> --}}
+	{{-- @dd($banners) --}}
 	<section class="main">
 		<div class="main-carousel owl-carousel">
 			<div class="main-item">
-				<div class="main-item__wrap">
-					<div class="main-item__content">
-						<h2 class="main-item__title">
-							MAGLUMI™ 4000 Plus + компьютер с сенсорным экраном
-						</h2>
-						<p class="main-item__text">
-							До 280 тестов/час 25 позиций для картриджей с реагентами<br>
-							Загрузка до 144 образцов (расширение до 280)<br>
-							Загрузка кювет до 160 штативов по 960 анализов
-						</p>
-						<div class="main-item__btns">
-							<a href="#" class="main-item__btn btn">
-								Подробнее
-							</a>
-							<a href="#" class="main-item__btn main-item__btn-trans btn">
-								Каталог
-							</a>
+				<div class="main-item__wrap">	
+					@foreach ($banners as $banner)
+						<div class="main-item__content">
+							<h2 class="main-item__title">
+								{{$banner->products->name_ru}}
+							</h2>
+							<p class="main-item__text">
+								{!!$banner->products->discription_ru!!}
+							</p>
+							<div class="main-item__btns">
+								<a href="#" class="main-item__btn btn">
+									Подробнее
+								</a>
+								{{-- <a href="#" class="main-item__btn main-item__btn-trans btn">
+									Каталог
+								</a> --}}
+							</div>
 						</div>
-					</div>
-					<div class="main-item__img">
-						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
-						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
-					</div>
+						<div class="main-item__img">
+							<img src="{{$banner->photo}}" alt="item" class="main-item__img-desc">
+							<img src="{{$banner->mobile_photo}}" alt="item" class="main-item__img-mobi">
+						</div>
+					@endforeach
 				</div>
 			</div>
-			<div class="main-item">
+			{{-- <div class="main-item">
 				<div class="main-item__wrap">
 					<div class="main-item__content">
 						<h2 class="main-item__title">
@@ -212,7 +208,7 @@
 						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
 					</div>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 		<ul class="main-dots dots">
 			<li class="active"></li>
@@ -254,7 +250,7 @@
 							Более 150 клиентов
 						</h4>
 					</div>
-					<a href="#" class="about-info__btn btn">
+					<a href="/about" class="about-info__btn btn">
 						О компании
 					</a>
 				</div>
@@ -263,87 +259,92 @@
 				<img src="img/about.png" alt="about">
 			</div>
 		</div>
+		{{-- @dd($categories) --}}
 	</section>
 	<section class="category">
-		<div class="container">
-			<h2 class="category__title section__title-btn">
-				<span>Категории оборудования</span>
-				<a href="#">Весь каталог</a>
-			</h2>
-			<div class="category-main">
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="/img/cat1.png" alt="category">
+		
+			<div class="container">
+				<h2 class="category__title section__title-btn">
+					<span>Категории оборудования</span>
+					<a href="#">Весь каталог</a>
+				</h2>
+				<div class="category-main">
+					@foreach ($categories as $category)
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="{{$category->photo}}" alt="category">
+							</div>
+							<p class="category-item__text">
+								{{$category->name_ru}}
+							</p>
+						</a>
+						{{-- <a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="/img/cat2.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								Гемостаз
+							</p>
+						</a>
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="img/cat3.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								Биохимия
+							</p>
+						</a>
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="img/cat4.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								Гематология
+							</p>
+						</a>
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="img/cat5.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								Реагенты ИХЛА
+							</p>
+						</a>
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="img/cat6.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								ПЦР-тесты
+							</p>
+						</a>
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="img/cat5.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								Реагенты ИХЛА
+							</p>
+						</a>
+						<a href="#" class="category-item">
+							<div class="category-item__img">
+								<img src="img/cat6.png" alt="category">
+							</div>
+							<p class="category-item__text">
+								ПЦР-тесты
+							</p>
+						</a> --}}
+						@endforeach
 					</div>
-					<p class="category-item__text">
-						ИХЛА
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="/img/cat2.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						Гемостаз
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="img/cat3.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						Биохимия
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="img/cat4.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						Гематология
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="img/cat5.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						Реагенты ИХЛА
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="img/cat6.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						ПЦР-тесты
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="img/cat5.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						Реагенты ИХЛА
-					</p>
-				</a>
-				<a href="#" class="category-item">
-					<div class="category-item__img">
-						<img src="img/cat6.png" alt="category">
-					</div>
-					<p class="category-item__text">
-						ПЦР-тесты
-					</p>
-				</a>
 			</div>
-		</div>
+		
 	</section>
 	<section class="product">
 		<div class="container">
 			<h2 class="product__title section__title-btn">
 				<span>Продукция</span>
 				<div>
-					<a href="#">
+					{{-- <a href="#">
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.5087 2.53174H7.41007C5.52265 2.53174 3.89557 4.06166 3.89557 5.94999V15.7702C3.89557 17.7649 5.41632 19.3553 7.41007 19.3553H14.7333C16.6217 19.3553 18.1516 17.6595 18.1516 15.7702V7.36807L13.5087 2.53174Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							<path d="M13.2679 2.521V5.18758C13.2679 6.48925 14.3211 7.54525 15.6219 7.548C16.8291 7.55075 18.0639 7.55166 18.1473 7.54616" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -351,7 +352,7 @@
 							<path d="M11.2223 9.72176H8.14597" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>		
 						<span>Скачать прайс</span>
-					</a>
+					</a> --}}
 					<a href="#" class="section__title-btn__white">Каталог</a>
 				</div>	
 			</h2>
@@ -1160,37 +1161,24 @@
 			</div>
 		</div>
 	</section>
+	{{-- @dd($partners->all()) --}}
 	<section class="partners">
 		<div class="container">
 			<h2 class="partners__title section__title-btn">
 				<span>Партнёры по Республике Узбекистан</span>
 			</h2>
+			
 			<div class="partners-wrap">
 				<div class="partners-main">
-					<img src="img/partners1.png" alt="ico">
-					<img src="img/partners2.png" alt="ico">
-					<img src="img/partners3.png" alt="ico">
-					<img src="img/partners4.png" alt="ico">
-					<img src="img/partners5.png" alt="ico">
-					<img src="img/partners6.png" alt="ico">
-					<img src="img/partners7.png" alt="ico">
-					<img src="img/partners8.png" alt="ico">
-					<img src="img/partners9.png" alt="ico">
-					<img src="img/partners10.png" alt="ico">
-					<img src="img/partners1.png" alt="ico">
-					<img src="img/partners4.png" alt="ico">
-					<img src="img/partners3.png" alt="ico">
-					<img src="img/partners2.png" alt="ico">
-					<img src="img/partners1.png" alt="ico">
-					<img src="img/partners2.png" alt="ico">
-					<img src="img/partners7.png" alt="ico">
-					<img src="img/partners5.png" alt="ico">
-					<img src="img/partners8.png" alt="ico">
-					<a href="#" class="partners__link">Еще 40+</a>
-				</div>
+						@foreach ($partners as $partner)
+							<img src="{{$partner->photo}}" alt="ico">
+						@endforeach
+						<a href="#" class="partners__link">Еще 40+</a>
+					</div>
 			</div>
 		</div>
 	</section>
+	{{-- @dd($informations->all()) --}}
 	<section class="knowledge">
 		<div class="container">
 			<h2 class="knowledge__title section__title-btn">
@@ -1199,15 +1187,17 @@
 				<a href="#" class="section__title-btn__white dev-open">Все</a>
 			</h2>
 			<div class="knowledge-main">
+				@foreach ($informations as $information)
 				<a href="#" class="knowledge-item">
 					<div class="knowledge-item__img">
-						<img src="img/know1.jpg" alt="knowledge">
+						<img src="{{$information->info_photo}}" alt="knowledge">
 					</div>
 					<div class="knowledge-item__name">
-						Семинары
+						{{$information->name_ru}}
 					</div>
 				</a>
-				<a href="knowledge.html#license" class="knowledge-item">
+				@endforeach
+				{{-- <a href="knowledge.html#license" class="knowledge-item">
 					<div class="knowledge-item__img">
 						<img src="img/know2.jpg" alt="knowledge">
 					</div>
@@ -1222,7 +1212,7 @@
 					<div class="knowledge-item__name">
 						Инструкции
 					</div>
-				</a>
+				</a> --}}
 				<a href="knowledge.html#more" class="knowledge-item">
 					<div class="knowledge-item__img">
 						<img src="img/know4.jpg" alt="knowledge">
@@ -1251,110 +1241,32 @@
 				</div>
 			</h2>
 		</div>
+		{{-- @dd($brends->all()) --}}
 		<div class="foreign-carousel owl-carousel">
+			@foreach ($brends as $brend)
 			<div class="foreign-carousel__item">
-                <div class="foreign-carousel__img">
-                    <img src="img/snibe.svg" alt="ico">
-                </div>
-                <p class="foreign-carousel__text">
-                    Snibe-это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-                    
-                    <span class="foreign-carousel__more">
-                        Подробнее
-                        <i class="fa fa-chevron-right"></i>
-                    </span>
-                </p>
-                <!-- ТЕКСТ ПОПАПА-->
-                <div class="foreign-carousel__popup">
-                    <p>
-                        Becton Dickinson (BD) - ведущая международная компания, разрабатывающая, производящая и продающая медицинское оборудование, изделия медицинского назначения, приборы и реагенты. Деятельность компании направлена на улучшение здоровья людей по всему миру. 
-                    </p>	
-                    <p>	
-                        Основными направлениями работы компании BD являются улучшение систем доставки лекарственных средств, совершенствование диагностики инфекционных заболеваний, рака, а также поддержка разработки новых лекарственных средств. Ресурсы компании направлены на  борьбу с наиболее серьезными заболеваниями человечества. Компания сотрудничает с учреждениями здравоохранения, научно-исследовательскими лабораториями, взаимодействует с представителями фармацевтической индустрии, поддерживает проведение научных исследований, а также осуществляет свободные продажи населению по всему миру.
-                    </p>
-                    <p>
-                        На рынке Узбекистана компания представлена автоматическими микробиологическими анализаторами BD Phoenix M50 и BD BACTEC, для автоматизированной идентификации микроорганизмов (ID) и определение их чувствительности к антимикробным препаратам (AST).
-                    </p>
-    
-                        Официальный сайт компании: <a href="#">www.bd.com</a>
-                </div>
+					<div class="foreign-carousel__img">
+						<img src="{{$brend->photo}}" alt="ico">
+					</div>
+					<p class="foreign-carousel__text">
+						{{$brend->discription_ru}}
+						{{-- {!!substr($brend->discription_ru, 0, 100)!!} --}}
+						
+						<span class="foreign-carousel__more">
+							Подробнее
+							<i class="fa fa-chevron-right"></i>
+						</span>
+					</p>
+				
+					<!-- ТЕКСТ ПОПАПА-->
+				<div class="foreign-carousel__popup">
+					<p>
+						{!!$brend->discription_ru!!}
+					</p>
+						Официальный сайт компании: <a href="{{$brend->link}}" target="_blank">{{$brend->link}}</a>
+				</div>
             </div>
-			<div class="foreign-carousel__item">
-                <div class="foreign-carousel__img">
-                    <img src="img/snibe.svg" alt="ico">
-                </div>
-                <p class="foreign-carousel__text">
-                    Snibe-это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-                    
-                    <span class="foreign-carousel__more">
-                        Подробнее
-                        <i class="fa fa-chevron-right"></i>
-                    </span>
-                </p>
-                <!-- ТЕКСТ ПОПАПА-->
-                <div class="foreign-carousel__popup">
-                    <p>
-                        Becton Dickinson (BD) - ведущая международная компания, разрабатывающая, производящая и продающая медицинское оборудование, изделия медицинского назначения, приборы и реагенты. Деятельность компании направлена на улучшение здоровья людей по всему миру. 
-                    </p>	
-                    <p>	
-                        Основными направлениями работы компании BD являются улучшение систем доставки лекарственных средств, совершенствование диагностики инфекционных заболеваний, рака, а также поддержка разработки новых лекарственных средств. Ресурсы компании направлены на  борьбу с наиболее серьезными заболеваниями человечества. Компания сотрудничает с учреждениями здравоохранения, научно-исследовательскими лабораториями, взаимодействует с представителями фармацевтической индустрии, поддерживает проведение научных исследований, а также осуществляет свободные продажи населению по всему миру.
-                    </p>
-                    <p>
-                        На рынке Узбекистана компания представлена автоматическими микробиологическими анализаторами BD Phoenix M50 и BD BACTEC, для автоматизированной идентификации микроорганизмов (ID) и определение их чувствительности к антимикробным препаратам (AST).
-                    </p>
-    
-                        Официальный сайт компании: <a href="#">www.bd.com</a>
-                </div>
-            </div>
-			<div class="foreign-carousel__item">
-				<div class="foreign-carousel__img">
-					<img src="img/randox.svg" alt="ico">
-				</div>
-				<p class="foreign-carousel__text">
-					randox -это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-				</p>
-			</div>
-			<div class="foreign-carousel__item">
-				<div class="foreign-carousel__img">
-					<img src="img/defactum.png" alt="ico">
-				</div>
-				<p class="foreign-carousel__text">
-					defactum -это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-				</p>
-			</div>
-			<div class="foreign-carousel__item">
-				<div class="foreign-carousel__img">
-					<img src="img/snibe.svg" alt="ico">
-				</div>
-				<p class="foreign-carousel__text">
-					Snibe-это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-				</p>
-			</div>
-			<div class="foreign-carousel__item">
-				<div class="foreign-carousel__img">
-					<img src="img/maccura.png" alt="ico">
-				</div>
-				<p class="foreign-carousel__text">
-					maccura-это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-				</p>
-			</div>
-			<div class="foreign-carousel__item">
-				<div class="foreign-carousel__img">
-					<img src="img/randox.svg" alt="ico">
-				</div>
-				<p class="foreign-carousel__text">
-					randox -это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-				</p>
-			</div>
-			<div class="foreign-carousel__item">
-				<div class="foreign-carousel__img">
-					<img src="img/defactum.png" alt="ico">
-				</div>
-				<p class="foreign-carousel__text">
-					defactum -это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
-				</p>
-			</div>
+			@endforeach
 		</div>
 	</section>
-
 @endsection

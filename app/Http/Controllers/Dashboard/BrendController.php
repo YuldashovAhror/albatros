@@ -47,7 +47,7 @@ class BrendController extends BaseController
             'discription_en' => 'required|string',
             'discription_ru' => 'required|string',
             'discription_uz' => 'required|string',
-            'brend_number' => 'integer',
+            
         ]);
         $brend = new Brend();
 

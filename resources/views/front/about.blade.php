@@ -1,5 +1,6 @@
 @extends('layouts.front.main')
 @section('content')
+{{-- @include('components.front.header') --}}
 	<div class="feedback">
 		<div class="feedback-content">
 			<span class="feedback__close">

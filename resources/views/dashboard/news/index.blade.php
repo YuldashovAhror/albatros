@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @section('content')
 <div class="col-sm-6" style="padding-top: 2rem; padding-bottom: 1.5rem">
-    <h3>Бренд</h3>
+    <h3>Новости</h3>
 </div>
     <div class="row">
         <div class="col-sm-12">
@@ -18,7 +18,7 @@
                             <th scope="col">Фото</th>
                             <th scope="col">Название Ru</th>
                             <th scope="col">Категория новостей Ru</th>
-                            <th scope="col">Описание Ru</th>
+                            {{-- <th scope="col">Описание Ru</th> --}}
                             <th scope="col">Фото 2</th>
                             <th scope="col">Ссылка на видео</th>
                             <th scope="col">Даты</th>
@@ -35,7 +35,7 @@
                                 <td><img src="{{$new->photo}}" alt="" style="width: 100px; height: 100px;"></td>
                                 <td >{{$new->title_uz}}</td>
                                 <td >{{$new->newscategories->name_ru}}</td>
-                                <td>{!!$new->discription_ru!!}</td>
+                                {{-- <td>{!!$new->discription_ru!!}</td> --}}
                                 @if ($new->photo_2 != null)
                                 <td><img src="{{$new->photo_2}}" alt="" style="width: 100px; height: 100px;"></td>
                                 @elseif($new->photo_2 == null)

@@ -11,7 +11,7 @@
     </div>
 
     <span class="tel-popup">
-        <img src="img/tel-popup.svg" alt="ico">
+        <img src="/img/tel-popup.svg" alt="ico">
     </span>
 
 

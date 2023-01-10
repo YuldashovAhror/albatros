@@ -370,7 +370,7 @@
 				</div>
 				<div class="product-carousel__text">
 					<p>{{$product->categories->name_ru}}</p>
-					<p>{!!substr($product->discription_ru, 0, 200)!!}</p>
+					<p>{!! mb_substr($product->discription_ru, 0, 100) !!}</p>
 				</div>
 				<a href="{{route('product.show', $product->slug)}}" class="product-carousel__btn btn">
 					Подробнее
@@ -982,8 +982,9 @@
 						<img src="{{$brend->photo}}" alt="ico">
 					</div>
 					<p class="foreign-carousel__text">
-						{{$brend->discription_ru}}
-						{{-- {!!substr($brend->discription_ru, 0, 100)!!} --}}
+						{{-- {{$brend->discription_ru}} --}}
+						{!!substr($brend->discription_ru, 0, 100)!!}
+						{{-- {!! mb_substr($product->discription_ru, 0, 100) !!} --}}
 						
 						<span class="foreign-carousel__more">
 							Подробнее

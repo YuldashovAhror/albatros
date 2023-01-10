@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brend;
+use App\Models\InfoCategory;
+use App\Models\Information;
 use Illuminate\Http\Request;
 
-class BrendController extends Controller
+class InformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +16,9 @@ class BrendController extends Controller
      */
     public function index()
     {
-        $brends = Brend::all();
-        return view('front.brends',[
-            'brends'=>$brends
+        $infocats = InfoCategory::all();
+        return view('front.knowledge', [
+            'infocats'=>$infocats
         ]);
     }
 
@@ -50,7 +51,12 @@ class BrendController extends Controller
      */
     public function show($id)
     {
-        //
+        // $infos = Information::with('infocategories')->orderBy('id')->get();
+        // $inf = Information::where('info_cat_id', $id)->first();
+        // return view('front.knowledge',[
+        //     'inf'=>$inf,
+        //     'infos'=>$infos,
+        // ]);
     }
 
     /**

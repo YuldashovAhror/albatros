@@ -40,27 +40,8 @@
 
 	<section class="partners-page">
 		<div class="container">
-			{{-- <div class="section__nav">
-				<nav>
-					<a href="#partners" class="nav-link current">Партнёры</a>
-				</nav>
-			</div> --}}
-{{-- @dd($partners->all()) --}}
-			<div class="partners__main" id="partners">
-				<h2 class="section__title partners-page__title">
-					Партнёры
-				</h2>
-				<div class="partners-wrap">
-					<div class="partners-main">
-						@foreach ($partners as $partner)
-						<img src="{{ $partner->photo}}" alt="ico">
-						{{-- <a href="#" class="partners__link">Еще 40+</a> --}}
-						@endforeach
-					</div>
-				</div>
-			</div>
-
-			{{-- <div class="partners-foreign" id="foreign">
+            {{-- @dd($brends->all()) --}}
+			<div class="partners-foreign" id="foreign">
 				<h2 class="section__title partners-page__title">
 					Зарубежные партнёры 
 				</h2>
@@ -68,13 +49,13 @@
 					<div class="partners-foreign__row">
 
 						<!-- partners-foreign__row это одна строчка надо сделать 2 строчки-->
-
+                        @foreach ($brends as $brend)
 						<div class="foreign-carousel__item">
 							<div class="foreign-carousel__img">
-								<img src="img/snibe.svg" alt="ico">
+								<img src="{{$brend->photo}}" alt="ico">
 							</div>
 							<p class="foreign-carousel__text">
-								Snibe-это биомедицинская компания, специализирующаяся на клинических лабораторных инструментах и диагностических реагентах
+								{{$brend->discription_ru}}
 								
 								<span class="foreign-carousel__more">
 									Подробнее
@@ -84,19 +65,13 @@
 							<!-- ТЕКСТ ПОПАПА-->
 							<div class="foreign-carousel__popup">
 								<p>
-									Becton Dickinson (BD) - ведущая международная компания, разрабатывающая, производящая и продающая медицинское оборудование, изделия медицинского назначения, приборы и реагенты. Деятельность компании направлена на улучшение здоровья людей по всему миру. 
-								</p>	
-								<p>	
-									Основными направлениями работы компании BD являются улучшение систем доставки лекарственных средств, совершенствование диагностики инфекционных заболеваний, рака, а также поддержка разработки новых лекарственных средств. Ресурсы компании направлены на  борьбу с наиболее серьезными заболеваниями человечества. Компания сотрудничает с учреждениями здравоохранения, научно-исследовательскими лабораториями, взаимодействует с представителями фармацевтической индустрии, поддерживает проведение научных исследований, а также осуществляет свободные продажи населению по всему миру.
+									{{$brend->discription_ru}}
 								</p>
-								<p>
-									На рынке Узбекистана компания представлена автоматическими микробиологическими анализаторами BD Phoenix M50 и BD BACTEC, для автоматизированной идентификации микроорганизмов (ID) и определение их чувствительности к антимикробным препаратам (AST).
-								</p>
-				
 									Официальный сайт компании: <a href="#">www.bd.com</a>
 							</div>
 						</div>
-						<div class="foreign-carousel__item">
+                        @endforeach
+						{{-- <div class="foreign-carousel__item">
 							<div class="foreign-carousel__img">
 								<img src="img/maccura.png" alt="ico">
 							</div>
@@ -176,10 +151,10 @@
 				
 									Официальный сайт компании: <a href="#">www.bd.com</a>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 
-					<div class="partners-foreign__row">
+					{{-- <div class="partners-foreign__row">
 						<div class="foreign-carousel__item">
 							<div class="foreign-carousel__img">
 								<img src="img/snibe.svg" alt="ico">
@@ -306,9 +281,9 @@
 									Официальный сайт компании: <a href="#">www.bd.com</a>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 				</div>
-			</div> --}}
+			</div>
 		</div>
 	</section>
 	

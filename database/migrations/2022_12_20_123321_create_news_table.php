@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('discription_en');
             $table->string('photo_2')->nullable();
             $table->string('link');
+            $table->integer('year');
             $table->string('slug');
             $table->timestamps();
         });

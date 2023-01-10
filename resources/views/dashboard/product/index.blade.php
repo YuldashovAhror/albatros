@@ -18,10 +18,10 @@
                             <th scope="col">Фото</th>
                             {{-- <th scope="col">Категория новостей Ru</th> --}}
                             <th scope="col">Название Ru</th>
-                            <th scope="col">Описание Ru</th>
+                            <th scope="col">Название Ru</th>
+                            <th scope="col">Название En</th>
+                        
                             <th scope="col">Фото 2</th>
-                            <th scope="col">Ссылка на видео</th>
-                            
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -34,14 +34,15 @@
                                 <th scope="row">{{$num++}}</th>
                                 <td><img src="{{$product->photo}}" alt="" style="width: 100px; height: 100px;"></td>
                                 {{-- <td >{{$product->productscategories->name_ru}}</td> --}}
+                                <td >{{$product->name_uz}}</td>
                                 <td >{{$product->name_ru}}</td>
-                                <td>{!!$product->discription_ru!!}</td>
+                                <td >{{$product->name_en}}</td>
+                                
                                 @if ($product->instruct_photo != null)
                                 <td><img src="{{$product->instruct_photo}}" alt="" style="width: 100px; height: 100px;"></td>
                                 @elseif($product->instruct_photo == null)
                                 <td><h4>Null</h4></td>
                                 @endif
-                                <td>{{$product->link}}</td>
                                 <td>
                                     <form action="{{route('dashboard.product.edit', $product->slug)}}" method="GET" style="display: inline;">
                                         <button class="btn btn-xs btn-primary" type="submit"><i data-feather="edit"></i></button>

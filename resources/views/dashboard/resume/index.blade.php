@@ -20,6 +20,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Фото</th>
+                            <th scope="col">Название вакансии</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -27,19 +28,21 @@
                         $num = 1;
                         ?>
                         <tbody>
-                    {{-- @foreach ($partners as $partner)
+                        {{-- @dd($resumes->all()) --}}
+                    @foreach ($resumes as $resume)
                     <tbody>
                         <tr>
                             <th scope="row">{{$num++}}</th>
-                            <td><img src="{{$partner->photo}}" alt="" style="width: 100px; height: 100px;"></td>
+                            @if ($resume->file != null)
+                                <td><a href="{{ $resume->file }}"><button class="btn btn-primary">открыть</button></a></td>
+                            @else
+                                <td><h5>null</h5></td>
+                            @endif
+                            <td>{{$resume->vacancies->name_ru}}</td>
                             <td>
-                                <form action="{{route('dashboard.partners.edit', $partner->id)}}" method="GET" style="display: inline;">
-                                    <button class="btn btn-xs btn-primary" type="submit"><i data-feather="edit"></i></button>
-                                </form>
-                                
-                                    <button class="btn btn-xs btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter{{$partner->id}}" data-bs-original-title="" title=""><i data-feather="trash-2"></i></button>
+                                <button class="btn btn-xs btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter{{$resume->id}}" data-bs-original-title="" title=""><i data-feather="trash-2"></i></button>
                             </td>
-                            <div class="modal fade" id="exampleModalCenter{{$partner->id}}" tabindex="-1" aria-labelledby="exampleModalCenter" style="display: none;" aria-hidden="true">
+                            <div class="modal fade" id="exampleModalCenter{{$resume->id}}" tabindex="-1" aria-labelledby="exampleModalCenter" style="display: none;" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -48,7 +51,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button class="btn btn-secondary" type="button" data-bs-dismiss="modal" data-bs-original-title="" title="">Закрывать</button>
-                                        <form action="{{route('dashboard.partners.destroy', $partner->id)}}" method="post">
+                                        <form action="{{route('dashboard.resume.destroy', $resume->id)}}" method="post">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" type="submit"  data-bs-original-title="" title="">Удалить</button>
@@ -59,7 +62,7 @@
                             </div>
                         </tr>
                     </tbody>    
-                    @endForeach --}}
+                    @endForeach
                 </table>
             </div>
             </div>

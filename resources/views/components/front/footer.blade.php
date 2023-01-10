@@ -10,11 +10,11 @@
                 <div class="footer-wrap">
                     <div>
                         <div class="footer-info">
-                            <img src="img/marker.svg" alt="ico">
+                            <img src="/img/marker.svg" alt="ico">
                             <p>39 улица М. Массона, Ташкент</p>
                         </div>
                         <div class="footer-tel">
-                            <img src="img/tel-round.svg" alt="ico">
+                            <img src="/img/tel-round.svg" alt="ico">
                             <div>
                                 <p>
                                     <span>+998 78 152 02 22</span> Головной офис
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="footer-info">
-                            <img src="img/time.svg" alt="ico">
+                            <img src="/img/time.svg" alt="ico">
                             <p>8:00 - 19:30 <br>
                                 Ежедневно</p>
                         </div>
@@ -84,17 +84,17 @@
                         <ul class="footer-follow">
                             <li class="footer-follow__item">
                                 <a href="#" class="footer-follow__link">
-                                    <img src="img/telegram.svg" target="_blank" alt="ico">
+                                    <img src="/img/telegram.svg" target="_blank" alt="ico">
                                 </a>
                             </li>
                             <li class="footer-follow__item">
                                 <a href="#" class="footer-follow__link">
-                                    <img src="img/instagram.svg" target="_blank" alt="ico">
+                                    <img src="/img/instagram.svg" target="_blank" alt="ico">
                                 </a>
                             </li>
                             <li class="footer-follow__item">
                                 <a href="#" class="footer-follow__link">
-                                    <img src="img/facebook.svg" target="_blank" alt="ico">
+                                    <img src="/img/facebook.svg" target="_blank" alt="ico">
                                 </a>
                             </li>
                         </ul>

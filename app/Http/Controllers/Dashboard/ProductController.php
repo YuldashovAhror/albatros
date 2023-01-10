@@ -55,7 +55,7 @@ class ProductController extends BaseController
         if($request->file('photo')){
             $product['photo'] = $this->photoSave($request->file('photo'), 'image/product');
         }
-        // $product->new_cat_id = $request->productcategories;
+        $product->cat_id = $request->categories;
         $slug = str_replace(' ', '_', strtolower($request->name_uz)) . '-' . Str::random(5);
         $product->name_uz = $request->name_uz;
         $product->name_ru = $request->name_ru;
@@ -127,7 +127,7 @@ class ProductController extends BaseController
             }
             $product['photo'] = $this->photoSave($request->file('photo'), 'image/product');
         }
-        // $product->new_cat_id = $request->productcategories;
+        $product->cat_id = $request->categories;
         $new_slug = str_replace(' ', '_', strtolower($request->name_uz)) . '-' . Str::random(5);
         $product->name_uz = $request->name_uz;
         $product->name_ru = $request->name_ru;

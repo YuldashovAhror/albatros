@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Brend;
 use Illuminate\Http\Request;
 
-class BrendController extends Controller
+class BrendproductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,7 @@ class BrendController extends Controller
      */
     public function index()
     {
-        $brends = Brend::all();
-        return view('front.brends',[
-            'brends'=>$brends
-        ]);
+        return view('front.brendproduct');
     }
 
     /**
@@ -48,9 +45,10 @@ class BrendController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $brend = Brend::with('products')->where('slug', $slug)->first();
+        return view('front.brendproduct', compact('brend'));
     }
 
     /**

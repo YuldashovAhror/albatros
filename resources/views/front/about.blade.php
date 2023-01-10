@@ -1,83 +1,9 @@
 @extends('layouts.front.main')
 @section('content')
 {{-- @include('components.front.header') --}}
-	<div class="feedback">
-		<div class="feedback-content">
-			<span class="feedback__close">
-				<img src="img/close-black.svg" alt="ico">
-			</span>
-			<h4 class="feedback__title">
-				Форма обратной связи
-			</h4>
-			<p class="feedback__text">
-				Оставьте ваши координаты и мы свяжемся с вами в ближайшее время
-			</p>
-			<form action="#" class="feedback-form form">
-				<div class="form__wrap">
-					<input type="tel" class="form__tel" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$" inputmode="text">
-				</div>
-				<input type="text" class="form__name" required="" placeholder="Как вас зовут?">
-				<p class="feedback__text">
-					Нажимая кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
-				</p>
-				<button type="submit" class="form__btn btn" >
-
-					{{-- onclick="choose({{ $vacan->id }})" --}}
-					Отправить заявку
-				</button>
-			</form>
-		</div>
-	</div>
+	
 	<!-- CHANGE попап вакансий-->
-	<div class="feedback-vacancy">
-		<div class="feedback-content">
-			<div class="feedback-wrap">
-				<span class="feedback__close">
-					<img src="img/close-black.svg" alt="ico">
-				</span>
-				<h4 class="feedback__title">
-					Заявка на вакансию
-				</h4>
-				<div class="feedback-vacancy__name">
-					<img src="img/Briefcase.svg" alt="ico">
-					<span>Менеджер по продажам</span>
-				</div>
-				<h3 class="feedback__subtitle">
-					Контактные данные
-				</h3>
-				<form action="{{route('dashboard.vacancy.store')}}" method="POST" enctype="multipart/form-data" class="feedback-form form">
-					@csrf
-					<div class="form__wrap">
-						<input type="tel" class="form__tel" name="number" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$">
-					</div>
-					<input type="text" name="name" class="form__name" required placeholder="Как вас зовут?">
-					<h3 class="feedback__subtitle">
-						Загрузить резюме
-					</h3>
-					<div class="form-file__wrap">
-						<input type="file" name="file1" id="file" onchange="uploadFile()">
-					</div>
-					<button type="submit" class="form__btn btn">
-						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.2317 2.76854C16.0902 2.6272 15.9137 2.52609 15.7202 2.47561C15.5267 2.42513 15.3232 2.4271 15.1308 2.48131L2.02957 6.1765C1.80914 6.23867 1.61293 6.36664 1.46717 6.5433C1.32142 6.71997 1.23306 6.93691 1.2139 7.16515C1.19475 7.39338 1.24571 7.62202 1.35998 7.82051C1.47426 8.019 1.64639 8.17788 1.85338 8.27592L7.33308 10.8716L11.0795 7.12517C11.185 7.01967 11.3281 6.9604 11.4773 6.9604C11.6265 6.9604 11.7695 7.01967 11.875 7.12517C11.9805 7.23066 12.0398 7.37375 12.0398 7.52294C12.0398 7.67213 11.9805 7.81522 11.875 7.92071L8.12863 11.6671L10.7243 17.1468C10.8142 17.3396 10.9574 17.5027 11.137 17.6167C11.3166 17.7307 11.525 17.791 11.7378 17.7904C11.77 17.7904 11.8024 17.789 11.8351 17.7863C12.0637 17.7684 12.2813 17.6805 12.4582 17.5346C12.6351 17.3886 12.7627 17.1917 12.8237 16.9706L16.5189 3.86944C16.5731 3.67696 16.575 3.47353 16.5245 3.28005C16.474 3.08657 16.373 2.91002 16.2317 2.76854Z" fill="white"/>
-						</svg>
-						Отправить заявку
-					</button>
-				</form>
-			</div>
-			<div class="feedback-done">
-				<img src="img/done.svg" alt="ico">
-				<div class="feedback-done__title">
-					Ваша заявка успешно отправлена
-				</div>
-				<p class="feedback-done__text">
-					Наши менеджеры обязательно свяжутся с Вами 
-					и ответят на все Ваши вопросы.
-				</p>
-				<a href="index.html" class="form__btn btn">На главную</a>
-			</div>
-		</div>
-	</div>
+	
 
 	<div class="zoom-image-popup">
 		<svg class="zoom-image-popup__close" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,9 +46,9 @@
 	<div class="offer">
 		<div class="container">
 			<div class="offer-links">
-				<a href="#">Главная</a>
+				<a href="/">Главная</a>
 				<i class="fa fa-chevron-right current"></i>
-				<a href="#" class="current">О компании</a>
+				<a href="/about" class="current">О компании</a>
 			</div>
 		</div>
 	</div>
@@ -160,7 +86,6 @@
 			</div>
 		</div>
 
-		
 		<div class="about__main" id="about">
 			<div class="container">
 				<div class="about__main-wrap">
@@ -216,7 +141,7 @@
 				</div>
 			</div>
 		</div>
-
+		{{-- @dd($years) --}}
 		<div class="timeline" id="event">
 			<div class="container">
 				<h2 class="timeline__title section__title-btn">
@@ -224,11 +149,11 @@
 					<a href="#" class="section__title-btn__white">Все</a>
 				</h2>
 				<div class="timeline-type">
-					<span class="timeline-type__event">События</span>
+					{{-- <span class="timeline-type__event">События</span> --}}
 					<span class="timeline-type__seminar">Семинары</span>
 				</div>
 			</div>
-			<div class="timeline-event timeline-tab">
+			{{-- <div class="timeline-event timeline-tab">
 				<div class="container">
 					<div class="timeline-years">
 						<span>2017</span>
@@ -709,18 +634,116 @@
 					</div>
 				</div>
 	
-			</div>
+			</div> --}}
 			<div class="timeline-seminar timeline-tab">
 				<div class="container">
 					<div class="timeline-years">
-						<span>2017</span>
-						<span>2018</span>
-						<span>2019</span>
-						<span>2020</span>
-						<span>2021</span>
+						@foreach($years as $year=>$news)
+						{{-- <span>2019</span>
+						<span>2020</span> --}}
+						<span >{{$year}}</span>
+					@endforeach
 					</div>
 				</div>
+				@foreach($years as $year=>$news)
 				<div class="timeline__year">
+					<div class="timeline-carousel owl-carousel">
+						@foreach($news as $new)
+						<div class="timeline-carousel__item">
+							<div class="timeline-carousel__date">
+								{{$new->date}}
+							</div>
+							<div class="timeline-carousel__dot">
+								<span></span>
+							</div>
+							<div class="timeline-carousel__wrap">
+								<img src="{{$new->photo}}" alt="image">
+								<p class="timeline-carousel__text">
+									{!!substr($new->discription_ru, 0, 200)!!}
+								</p>
+								<a href="{{route('event.show', $new->slug)}}" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div>
+						@endforeach
+						{{-- <div class="timeline-carousel__item">
+							<div class="timeline-carousel__date">
+								24.03.21
+							</div>
+							<div class="timeline-carousel__dot">
+								<span></span>
+							</div>
+							<div class="timeline-carousel__wrap">
+								<img src="img/timeline2.jpg" alt="image">
+								<p class="timeline-carousel__text">
+									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
+								</p>
+								<a href="#" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="timeline-carousel__item">
+							<div class="timeline-carousel__date">
+								24.03.21
+							</div>
+							<div class="timeline-carousel__dot">
+								<span></span>
+							</div>
+							<div class="timeline-carousel__wrap">
+								<img src="img/timeline1.jpg" alt="image">
+								<p class="timeline-carousel__text">
+									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
+								</p>
+								<a href="#" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="timeline-carousel__item">
+							<div class="timeline-carousel__date">
+								24.03.21
+							</div>
+							<div class="timeline-carousel__dot">
+								<span></span>
+							</div>
+							<div class="timeline-carousel__wrap">
+								<img src="img/timeline2.jpg" alt="image">
+								<p class="timeline-carousel__text">
+									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
+								</p>
+								<a href="#" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="timeline-carousel__item">
+							<div class="timeline-carousel__date">
+								24.03.21
+							</div>
+							<div class="timeline-carousel__dot">
+								<span></span>
+							</div>
+							<div class="timeline-carousel__wrap">
+								<img src="img/timeline1.jpg" alt="image">
+								<p class="timeline-carousel__text">
+									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
+								</p>
+								<a href="#" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div>
+						<div class="timeline-carousel__item">
+							<div class="timeline-carousel__date">
+								24.03.21
+							</div>
+							<div class="timeline-carousel__dot">
+								<span></span>
+							</div>
+							<div class="timeline-carousel__wrap">
+								<img src="img/timeline2.jpg" alt="image">
+								<p class="timeline-carousel__text">
+									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
+								</p>
+								<a href="#" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div> --}}
+					</div>
+				</div>
+				@endforeach
+				{{-- <div class="timeline__year">
 					<div class="timeline-carousel owl-carousel">
 						<div class="timeline-carousel__item">
 							<div class="timeline-carousel__date">
@@ -1095,104 +1118,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="timeline__year">
-					<div class="timeline-carousel owl-carousel">
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
-
+{{-- @dd($vacancy->all()) --}}
 		<div class="personal" id="personal">
 			<div class="container">
 				<h2 class="personal__title section__title">
@@ -1206,63 +1135,19 @@
 				<!-- CHANGE новый блок-->
 
 				<div class="knowledge-tab personal-tab ">
+					@foreach ($vacancies as $vacancy)
 					<div class="knowledge-tab__item">
 						<div class="knowledge-tab__name">
-							Менеджер по продажам медицинского оборудования
+							{{$vacancy->name_ru}}
 
 							<i class="fa fa-chevron-down"></i>
 						</div>
 						<div class="knowledge-tab__content product-tab__text">
 							<!-- ТЕГ Р ОБЫЧНЫЙ ТЕКСТ, LI С ТОЧКАМИ, BR ОТСТУП-->
 							<p>
-								Требования:
+								{!!$vacancy->discription_ru!!}
 							</p>
-
-							<ul>
-								<li>Грамотная устная речь и переписка на русском и узбекском языках</li>
-								<li>Возможность приступить к обучению и работе у нас - уже завтра</li>
-								<li>Опыт работы в продажах «на телефоне» и переписках - обязателен!</li>
-								<li>Опыт работы в Amocrm - приветствуется</li>
-								<li>Умение выявлять потребности клиента и работать с возражениями</li>
-								<li>Быть «online» на раб.месте с 10-18 - 6 дней в неделю -</li>
-
-							</ul>
-
-							
-							<p>Обязанности:</p>
-							<ul>
-								<li>Прием входящих звонков по телефону, e-mail и мессенджерам</li>
-								<li>Обзвон теплых лидов (посетителей наших соцсетей и сайта)</li>
-								<li>Заполнение и ведение карточек клиента в AmoCRM</li>
-								<li>Выполнение поставленного плана продаж (в формате KPI)</li>
-								<li>Работа по готовым скриптам</li>
-								<li>Ежедневная отчетность перед руководителем</li>
-							</ul>
-
-							<br>
-
-							<p>Основная функция менеджера: оперативная и грамотная консультация всех поступающих обращений от потенциальных учеников наших курсов.</p>
-							<p>Условия работы:</p>
-
-
-
-							<ul>
-								<li>Комфортный офис в г. Ташкент</li>
-								<li>
-									Премия за KPI (прозрачная система мотивации - звонки, кол-во отправленных ссылок на оплату)
-									% c каждой продажи
-								</li>
-								<li>Выплаты зарплаты - 2 раза в месяц (аванс + основная ЗП) • • • Заработная плата: от 500$ (без верхних ограничений)</li>
-								<li>Представляем хорошее жилье в центре города</li>
-								<li>Оплачиваемая телефония</li>
-								<li>Бонусы (обучение + наставничество)</li>
-								<li>При успешном прохождении испытательного срока - гарантированная окладная часть и доп. премии</li>
-								<li>Работа в престижной компании, являющейся лидером рынка в Узбекистане и СНГ</li>
-							</ul>
-							
-
-
-							<a href="#" class="personal-btn btn">
+							<a href="#" class="personal-btn btn" onclick="choose({{ $vacancy->id }}, '{{ $vacancy->name_ru }}')">
 								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M16.2317 2.76854C16.0902 2.6272 15.9137 2.52609 15.7202 2.47561C15.5267 2.42513 15.3232 2.4271 15.1308 2.48131L2.02957 6.1765C1.80914 6.23867 1.61293 6.36664 1.46717 6.5433C1.32142 6.71997 1.23306 6.93691 1.2139 7.16515C1.19475 7.39338 1.24571 7.62202 1.35998 7.82051C1.47426 8.019 1.64639 8.17788 1.85338 8.27592L7.33308 10.8716L11.0795 7.12517C11.185 7.01967 11.3281 6.9604 11.4773 6.9604C11.6265 6.9604 11.7695 7.01967 11.875 7.12517C11.9805 7.23066 12.0398 7.37375 12.0398 7.52294C12.0398 7.67213 11.9805 7.81522 11.875 7.92071L8.12863 11.6671L10.7243 17.1468C10.8142 17.3396 10.9574 17.5027 11.137 17.6167C11.3166 17.7307 11.525 17.791 11.7378 17.7904C11.77 17.7904 11.8024 17.789 11.8351 17.7863C12.0637 17.7684 12.2813 17.6805 12.4582 17.5346C12.6351 17.3886 12.7627 17.1917 12.8237 16.9706L16.5189 3.86944C16.5731 3.67696 16.575 3.47353 16.5245 3.28005C16.474 3.08657 16.373 2.91002 16.2317 2.76854Z" fill="white"/>
 								</svg>
@@ -1271,72 +1156,58 @@
 
 						</div>
 					</div>
-
-					<div class="knowledge-tab__item">
-						<div class="knowledge-tab__name">
-							Менеджер по продажам чего-то другого
-
-							<i class="fa fa-chevron-down"></i>
-						</div>
-						<div class="knowledge-tab__content product-tab__text">
-							<!-- ТЕГ Р ОБЫЧНЫЙ ТЕКСТ, LI С ТОЧКАМИ, BR ОТСТУП-->
-							<p>
-								Требования:
-							</p>
-
-							<ul>
-								<li>Грамотная устная речь и переписка на русском и узбекском языках</li>
-								<li>Возможность приступить к обучению и работе у нас - уже завтра</li>
-								<li>Опыт работы в продажах «на телефоне» и переписках - обязателен!</li>
-								<li>Опыт работы в Amocrm - приветствуется</li>
-								<li>Умение выявлять потребности клиента и работать с возражениями</li>
-								<li>Быть «online» на раб.месте с 10-18 - 6 дней в неделю -</li>
-
-							</ul>
-
-							
-							<p>Обязанности:</p>
-							<ul>
-								<li>Прием входящих звонков по телефону, e-mail и мессенджерам</li>
-								<li>Обзвон теплых лидов (посетителей наших соцсетей и сайта)</li>
-								<li>Заполнение и ведение карточек клиента в AmoCRM</li>
-								<li>Выполнение поставленного плана продаж (в формате KPI)</li>
-								<li>Работа по готовым скриптам</li>
-								<li>Ежедневная отчетность перед руководителем</li>
-							</ul>
-
-							<br>
-
-							<p>Основная функция менеджера: оперативная и грамотная консультация всех поступающих обращений от потенциальных учеников наших курсов.</p>
-							<p>Условия работы:</p>
-
-
-
-							<ul>
-								<li>Комфортный офис в г. Ташкент</li>
-								<li>
-									Премия за KPI (прозрачная система мотивации - звонки, кол-во отправленных ссылок на оплату)
-									% c каждой продажи
-								</li>
-								<li>Выплаты зарплаты - 2 раза в месяц (аванс + основная ЗП) • • • Заработная плата: от 500$ (без верхних ограничений)</li>
-								<li>Представляем хорошее жилье в центре города</li>
-								<li>Оплачиваемая телефония</li>
-								<li>Бонусы (обучение + наставничество)</li>
-								<li>При успешном прохождении испытательного срока - гарантированная окладная часть и доп. премии</li>
-								<li>Работа в престижной компании, являющейся лидером рынка в Узбекистане и СНГ</li>
-							</ul>
-							
-
-
-							<a href="#" class="personal-btn btn">
-								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M16.2317 2.76854C16.0902 2.6272 15.9137 2.52609 15.7202 2.47561C15.5267 2.42513 15.3232 2.4271 15.1308 2.48131L2.02957 6.1765C1.80914 6.23867 1.61293 6.36664 1.46717 6.5433C1.32142 6.71997 1.23306 6.93691 1.2139 7.16515C1.19475 7.39338 1.24571 7.62202 1.35998 7.82051C1.47426 8.019 1.64639 8.17788 1.85338 8.27592L7.33308 10.8716L11.0795 7.12517C11.185 7.01967 11.3281 6.9604 11.4773 6.9604C11.6265 6.9604 11.7695 7.01967 11.875 7.12517C11.9805 7.23066 12.0398 7.37375 12.0398 7.52294C12.0398 7.67213 11.9805 7.81522 11.875 7.92071L8.12863 11.6671L10.7243 17.1468C10.8142 17.3396 10.9574 17.5027 11.137 17.6167C11.3166 17.7307 11.525 17.791 11.7378 17.7904C11.77 17.7904 11.8024 17.789 11.8351 17.7863C12.0637 17.7684 12.2813 17.6805 12.4582 17.5346C12.6351 17.3886 12.7627 17.1917 12.8237 16.9706L16.5189 3.86944C16.5731 3.67696 16.575 3.47353 16.5245 3.28005C16.474 3.08657 16.373 2.91002 16.2317 2.76854Z" fill="white"/>
-								</svg>
-								<span>Заполнить форму на вакансию</span>
-							</a>
-
-						</div>
+					@endforeach
+				</div>
+				
+			</div>
+		</div>
+		<div class="feedback-vacancy">
+			<div class="feedback-content">
+				<div class="feedback-wrap">
+					<span class="feedback__close">
+						<img src="img/close-black.svg" alt="ico">
+					</span>
+					<h4 class="feedback__title">
+						Заявка на вакансию
+					</h4>
+					<div class="feedback-vacancy__name">
+						<img src="img/Briefcase.svg" alt="ico">
+						<span id="vacancy_name">Менеджер по продажам</span>
 					</div>
+					<h3 class="feedback__subtitle">
+						Контактные данные
+					</h3>
+					<form action="{{route('dashboard.resume.store')}}" method="POST" enctype="multipart/form-data" class="feedback-form form">
+						@csrf
+						<input type="hidden" name="vacancy_id" id="vacancy__id">
+						<div class="form__wrap">
+							<input type="tel" class="form__tel" name="number" placeholder="+998" maxlength="19" required="" pattern="^[0-9-+\s()]*$">
+						</div>
+						<input type="text" name="first_name" class="form__name" required placeholder="Как вас зовут?">
+						<h3 class="feedback__subtitle">
+							Загрузить резюме
+						</h3>
+						<div class="form-file__wrap">
+							<input type="file" name="file" id="file" onchange="uploadFile()">
+						</div>
+						<button type="submit" class="form__btn btn">
+							<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.2317 2.76854C16.0902 2.6272 15.9137 2.52609 15.7202 2.47561C15.5267 2.42513 15.3232 2.4271 15.1308 2.48131L2.02957 6.1765C1.80914 6.23867 1.61293 6.36664 1.46717 6.5433C1.32142 6.71997 1.23306 6.93691 1.2139 7.16515C1.19475 7.39338 1.24571 7.62202 1.35998 7.82051C1.47426 8.019 1.64639 8.17788 1.85338 8.27592L7.33308 10.8716L11.0795 7.12517C11.185 7.01967 11.3281 6.9604 11.4773 6.9604C11.6265 6.9604 11.7695 7.01967 11.875 7.12517C11.9805 7.23066 12.0398 7.37375 12.0398 7.52294C12.0398 7.67213 11.9805 7.81522 11.875 7.92071L8.12863 11.6671L10.7243 17.1468C10.8142 17.3396 10.9574 17.5027 11.137 17.6167C11.3166 17.7307 11.525 17.791 11.7378 17.7904C11.77 17.7904 11.8024 17.789 11.8351 17.7863C12.0637 17.7684 12.2813 17.6805 12.4582 17.5346C12.6351 17.3886 12.7627 17.1917 12.8237 16.9706L16.5189 3.86944C16.5731 3.67696 16.575 3.47353 16.5245 3.28005C16.474 3.08657 16.373 2.91002 16.2317 2.76854Z" fill="white"/>
+							</svg>
+							Отправить заявку
+						</button>
+					</form>
+				</div>
+				<div class="feedback-done">
+					<img src="img/done.svg" alt="ico">
+					<div class="feedback-done__title">
+						Ваша заявка успешно отправлена
+					</div>
+					<p class="feedback-done__text">
+						Наши менеджеры обязательно свяжутся с Вами 
+						и ответят на все Ваши вопросы.
+					</p>
+					<a href="index.html" class="form__btn btn">На главную</a>
 				</div>
 			</div>
 		</div>
@@ -1399,4 +1270,14 @@
 
 
 	</section>
+@endsection
+
+@section('scripts')
+<script>
+	function choose(id, name)
+	{
+		$('#vacancy__id').val(id);
+		$('#vacancy_name').text(name);
+	}
+</script>
 @endsection

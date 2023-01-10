@@ -19,6 +19,6 @@ class InfoCategory extends Model
 
     public function informations()
     {
-        return $this->hasMany(Information::class);
+        return $this->hasMany(Information::class, 'info_cat_id');
     }
 }

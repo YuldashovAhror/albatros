@@ -66,6 +66,7 @@ class NewsController extends BaseController
         $news->link = $request->link;
         $news->new_cat_id = $request->newscategories;
         $news->date = $request->date;
+        $news->year = date_format(date_create($request->date), 'Y');
         $news['slug'] = $slug;
         if($request->file('photo_2')){
             $news['photo_2'] = $this->photoSave($request->file('photo_2'), 'image/news');
@@ -127,6 +128,7 @@ class NewsController extends BaseController
         $news->link = $request->link;
         $news->new_cat_id = $request->newscategories;
         $news->date = $request->date;
+        $news->year = date_format(date_create($request->date), 'Y');
         $news['slug'] = $new_slug;
         if($request->file('photo_2')){
             if(is_file(public_path($news->photo_2))){

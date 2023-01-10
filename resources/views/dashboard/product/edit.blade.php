@@ -14,21 +14,13 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <label class="form-label" >Название статуса</label>
-                    <select name="newscategories" class="form-control"  required="">
-                            @foreach (App\Models\NewsCategory::all() as $status)
+                    <select name="categories" class="form-control"  required="">
+                            @foreach (App\Models\Category::all() as $status)
                                 <option value="{{ $status->id }}">{{ $status->name_ru}}</option>
                             @endforeach
                     </select>
                 </div>
-                <div class="col-md-4">
-                    <label class="form-label" >Название статуса</label>
-                    <select name="newscategories" class="form-control"  required="">
-                            @foreach (App\Models\NewsCategory::all() as $status)
-                                <option value="{{ $status->id }}">{{ $status->name_ru}}</option>
-                            @endforeach
-                    </select>
-                </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-8 mb-3">
                     <label class="form-label" for="link">Ссылка на видео</label>
                     <div class="input-group">
                         <input class="form-control" name="link" id="link" type="text" placeholder="..." aria-describedby="inputGroupPrepend2"  value="{{$product->link}}">

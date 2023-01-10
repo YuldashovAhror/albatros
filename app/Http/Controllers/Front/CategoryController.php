@@ -3,21 +3,24 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brend;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class BrendController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $brends = Brend::all();
-        return view('front.brends',[
-            'brends'=>$brends
+        $category = Category::find($id);
+        $products = Product::where('cat_id', $id)->get();
+        return view('front.category',[
+            'products'=>$products,
+            'category'=>$category,
         ]);
     }
 

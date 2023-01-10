@@ -2,7 +2,7 @@
     <div class="feedback-content">
         <div class="feedback-wrap">
             <span class="feedback__close">
-                <img src="img/close-black.svg" alt="ico">
+                <img src="/img/close-black.svg" alt="ico">
             </span>
             <h4 class="feedback__title">
                 Форма обратной связи
@@ -27,7 +27,7 @@
 
         </div>
         <div class="feedback-done">
-            <img src="img/done.svg" alt="ico">
+            <img src="/img/done.svg" alt="ico">
             <div class="feedback-done__title">
                 Ваша заявка успешно отправлена
             </div>

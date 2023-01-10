@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brend;
+use App\Models\News;
 use Illuminate\Http\Request;
 
-class BrendController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,19 @@ class BrendController extends Controller
      */
     public function index()
     {
-        $brends = Brend::all();
-        return view('front.brends',[
-            'brends'=>$brends
+        $news = News::orderBy('year')->get();
+        $years = [];
+        foreach ($news as $new)
+        {
+            if (in_array($new->year, $years))
+            {
+                array_push($years[$new->year], $new);
+            }else{
+                $years[$new->year][] = $new;
+            }
+        }
+        return view('front.events', [
+            'years' =>$years,
         ]);
     }
 
@@ -48,9 +58,14 @@ class BrendController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $news = News::all();
+        $new = News::where('slug', $slug)->first();
+        return view('front.events-single', [
+            'new'=>$new,
+            'news'=>$news
+        ]);
     }
 
     /**

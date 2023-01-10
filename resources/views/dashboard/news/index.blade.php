@@ -20,7 +20,6 @@
                             <th scope="col">Категория новостей Ru</th>
                             {{-- <th scope="col">Описание Ru</th> --}}
                             <th scope="col">Фото 2</th>
-                            <th scope="col">Ссылка на видео</th>
                             <th scope="col">Даты</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -41,7 +40,6 @@
                                 @elseif($new->photo_2 == null)
                                 <td><h4>Null</h4></td>
                                 @endif
-                                <td>{{$new->link}}</td>
                                 <td>{{$new->date}}</td>
                                 <td>
                                     <form action="{{route('dashboard.news.edit', $new->slug)}}" method="GET" style="display: inline;">

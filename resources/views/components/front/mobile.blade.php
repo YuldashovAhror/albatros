@@ -2,7 +2,7 @@
     <div class="mobile-menu__wrap">
         <ul>
             <li>
-                <a href="#" class="current">Главная</a>
+                <a href="/" class="current">Главная</a>
             </li>
             <li>
                 <a href="#">Каталог</a>

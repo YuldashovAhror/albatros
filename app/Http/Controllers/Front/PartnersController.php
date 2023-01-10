@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brend;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
-class BrendController extends Controller
+class PartnersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,10 @@ class BrendController extends Controller
      */
     public function index()
     {
-        $brends = Brend::all();
-        return view('front.brends',[
-            'brends'=>$brends
+        $partners = Partner::all();
+
+        return view('front.partners', [
+            'partners'=>$partners
         ]);
     }
 

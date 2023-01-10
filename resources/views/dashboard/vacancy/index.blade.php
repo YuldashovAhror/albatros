@@ -16,7 +16,9 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Название Uz</th>
-                            <th scope="col">Описание Uz</th>
+                            <th scope="col">Название Ru</th>
+                            <th scope="col">Название En</th>
+                            
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -28,7 +30,8 @@
                             <tr>
                                 <th scope="row">{{$num++}}</th>
                                 <td >{{$vacancy->name_uz}}</td>
-                                <td>{!!$vacancy->discription_uz!!}</td>
+                                <td >{{$vacancy->name_ru}}</td>
+                                <td >{{$vacancy->name_en}}</td>
                                 <td>
                                     <form action="{{route('dashboard.vacancy.edit', $vacancy->slug)}}" method="GET" style="display: inline;">
                                         <button class="btn btn-xs btn-primary" type="submit"><i data-feather="edit"></i></button>

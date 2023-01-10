@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brend;
+use App\Models\News;
+use App\Models\Vacancy;
 use Illuminate\Http\Request;
 
-class BrendController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +16,21 @@ class BrendController extends Controller
      */
     public function index()
     {
-        $brends = Brend::all();
-        return view('front.brends',[
-            'brends'=>$brends
+        $vacancies = Vacancy::all();
+        $news = News::orderBy('year')->get();
+        $years = [];
+        foreach ($news as $new)
+        {
+            if (in_array($new->year, $years))
+            {
+                array_push($years[$new->year], $new);
+            }else{
+                $years[$new->year][] = $new;
+            }
+        }
+        return view('front.about', [
+            'years'=>$years,
+            'vacancies'=>$vacancies,
         ]);
     }
 

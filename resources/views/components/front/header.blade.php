@@ -1,44 +1,19 @@
 <header class="header">
     <div class="header-logos">
         <div class="container">
-            {{-- <?php
-                $brends = App\Models\Brand::orderBy('brand_number')->take()->get();
+            <?php
+                $brends = App\Models\Brend::where('brend_number', '<', 10)->orderBy('brend_number')->get();
                 ?>
-                @dd($brends)
             @foreach ($brends as $brend)
-            <a href="#">
+            <a href="{{route('brenproducts.show', $brend->slug)}}">
                 <img src="{{$brend->photo}}" alt="ico" class="header-logos__img">                    
             </a>  
-            @endforeach --}}
-            {{-- <a href="#">
-                <img src="/img/bd.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/bioquell.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/qiagen.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/werfen.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/randox.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/dymind.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/randox.svg" alt="ico" class="header-logos__img">
-            </a>
-            <a href="#">
-                <img src="/img/dymind.svg" alt="ico" class="header-logos__img">
-            </a> --}}
+            @endforeach
             <div class="header-logos__time">
                 Пн. – Пт.: с 09:00 до 18:00
             </div>
             <div class="header-logos__tel">
-                <img src="img/tel.svg" alt="ico">
+                <img src="/img/tel.svg" alt="ico">
                 <span>+998(78) 150 06 88</span>
             </div>
         </div>
@@ -47,7 +22,7 @@
         <div class="container">
             <div class="header-nav__logo">
                 <a href="{{route('main')}}">
-                    <img src="img/logo.svg" alt="Albatros">
+                    <img src="/img/logo.svg" alt="Albatros">
                 </a>
             </div>
             <ul class="header-nav__menu menu">

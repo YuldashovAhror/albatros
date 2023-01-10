@@ -22,4 +22,5 @@
 @include('components.front.footer')
 @endif
 @include('components.front.scripts')
+@yield('scripts')
 </body>

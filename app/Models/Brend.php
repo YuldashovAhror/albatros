@@ -26,4 +26,9 @@ class Brend extends Model
     {
         return $this->hasMany(Category::class);
     }
+
+    public function products()
+    {
+        return $this->hasManyThrough(Product::class, Category::class, 'brend_id', 'cat_id', 'id', 'id');
+    }
 }

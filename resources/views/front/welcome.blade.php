@@ -61,7 +61,7 @@
 								{{$banner->products->name_ru}}
 							</h2>
 							<p class="main-item__text">
-								{!!substr($banner->products->discription_ru, 0, 100)!!}
+								{!! mb_substr($banner->products->discription_ru, 0, 100) !!}
 								{{-- {!!substr($brend->discription_ru, 0, 100)!!} --}}
 							</p>
 							<div class="main-item__btns">
@@ -80,136 +80,6 @@
 					@endforeach
 				</div>
 			</div>
-			{{-- <div class="main-item">
-				<div class="main-item__wrap">
-					<div class="main-item__content">
-						<h2 class="main-item__title">
-							MAGLUMI™ 4000 Plus + компьютер с сенсорным экраном
-						</h2>
-						<p class="main-item__text">
-							До 280 тестов/час 25 позиций для картриджей с реагентами<br>
-							Загрузка до 144 образцов (расширение до 280)<br>
-							Загрузка кювет до 160 штативов по 960 анализов
-						</p>
-						<div class="main-item__btns">
-							<a href="#" class="main-item__btn btn">
-								Подробнее
-							</a>
-							<a href="#" class="main-item__btn main-item__btn-trans btn">
-								Каталог
-							</a>
-						</div>
-					</div>
-					<div class="main-item__img">
-						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
-						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
-					</div>
-				</div>
-			</div>
-			<div class="main-item">
-				<div class="main-item__wrap">
-					<div class="main-item__content">
-						<h2 class="main-item__title">
-							MAGLUMI™ 4000 Plus2 + компьютер с сенсорным экраном
-						</h2>
-						<p class="main-item__text">
-							До 280 тестов/час 25 позиций для картриджей с реагентами<br>
-							Загрузка до 144 образцов (расширение до 280)<br>
-							Загрузка кювет до 160 штативов по 960 анализов
-						</p>
-						<div class="main-item__btns">
-							<a href="#" class="main-item__btn btn">
-								Подробнее
-							</a>
-							<a href="#" class="main-item__btn main-item__btn-trans btn">
-								Каталог
-							</a>
-						</div>
-					</div>
-					<div class="main-item__img">
-						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
-						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
-					</div>
-				</div>
-			</div>
-			<div class="main-item">
-				<div class="main-item__wrap">
-					<div class="main-item__content">
-						<h2 class="main-item__title">
-							MAGLUMI™ 4000 Plus3 + компьютер с сенсорным экраном
-						</h2>
-						<p class="main-item__text">
-							До 280 тестов/час 25 позиций для картриджей с реагентами<br>
-							Загрузка до 144 образцов (расширение до 280)<br>
-							Загрузка кювет до 160 штативов по 960 анализов
-						</p>
-						<div class="main-item__btns">
-							<a href="#" class="main-item__btn btn">
-								Подробнее
-							</a>
-							<a href="#" class="main-item__btn main-item__btn-trans btn">
-								Каталог
-							</a>
-						</div>
-					</div>
-					<div class="main-item__img">
-						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
-						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
-					</div>
-				</div>
-			</div>
-			<div class="main-item">
-				<div class="main-item__wrap">
-					<div class="main-item__content">
-						<h2 class="main-item__title">
-							MAGLUMI™ 4000 Plus4 + компьютер с сенсорным экраном
-						</h2>
-						<p class="main-item__text">
-							До 280 тестов/час 25 позиций для картриджей с реагентами<br>
-							Загрузка до 144 образцов (расширение до 280)<br>
-							Загрузка кювет до 160 штативов по 960 анализов
-						</p>
-						<div class="main-item__btns">
-							<a href="#" class="main-item__btn btn">
-								Подробнее
-							</a>
-							<a href="#" class="main-item__btn main-item__btn-trans btn">
-								Каталог
-							</a>
-						</div>
-					</div>
-					<div class="main-item__img">
-						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
-						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
-					</div>
-				</div>
-			</div>
-			<div class="main-item">
-				<div class="main-item__wrap">
-					<div class="main-item__content">
-						<h2 class="main-item__title">
-							MAGLUMI™ 4000 Plus4 + компьютер с сенсорным экраном
-						</h2>
-						<p class="main-item__text">
-							До 280 тестов/час 25 позиций для картриджей с реагентами<br>
-							Загрузка до 144 образцов (расширение до 280)<br>
-							Загрузка кювет до 160 штативов по 960 анализов
-						</p>
-						<div class="main-item__btns">
-							<a href="#" class="main-item__btn btn">
-								Подробнее
-							</a>
-							<a href="#" class="main-item__btn main-item__btn-trans btn">
-								Каталог
-							</a>
-						</div>
-					</div>
-					<div class="main-item__img">
-						<img src="/img/main1.png" alt="item" class="main-item__img-desc">
-						<img src="/img/main1-mobile.png" alt="item" class="main-item__img-mobi">
-					</div>
-				</div>
-			</div> --}}
 		</div>
 		<ul class="main-dots dots">
 			<li class="active"></li>
@@ -358,7 +228,6 @@
 				</div>	
 			</h2>
 		</div>
-		{{-- @dd($products->all()) --}}
 		<div class="product-carousel owl-carousel">
 			@foreach ($products as $product)
 			<div class="product-carousel__item">
@@ -540,336 +409,73 @@
 				<a href="#" class="section__title-btn__white">Все</a>
 			</h2>
 			<div class="timeline-type">
-				{{-- <span class="timeline-type__event">События</span> --}}
+				<span class="timeline-type__event">События</span>
 				<span class="timeline-type__seminar">Семинары</span>
 			</div>
-		</div>
-		{{-- <div class="timeline-event timeline-tab">
-			<div class="container">
-				<div class="timeline-years">
-					<span>2019</span>
-					<span>2020</span>
-					<span>2021</span>
-				</div>
-			</div>
-			<div class="timeline__year">
-				<div class="timeline-carousel owl-carousel">
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
+			<div class="timeline-event timeline-tab">
+				<div class="container">
+					<div class="timeline-years">
+						@foreach($years_event as $year=>$events)
+							<span>{{ $year }}</span>
+						@endforeach
 					</div>
 				</div>
-			</div>
-			<div class="timeline__year">
-				<div class="timeline-carousel owl-carousel">
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="timeline__year">
-				<div class="timeline-carousel owl-carousel">
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline1.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-					<div class="timeline-carousel__item">
-						<div class="timeline-carousel__date">
-							24.03.21
-						</div>
-						<div class="timeline-carousel__dot">
-							<span></span>
-						</div>
-						<div class="timeline-carousel__wrap">
-							<img src="img/timeline2.jpg" alt="image">
-							<p class="timeline-carousel__text">
-								Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-							</p>
-							<a href="#" class="timeline-carousel__link">Подробнее</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> --}}
-		<div class="timeline-seminar timeline-tab">
-			<div class="container">
-				<div class="timeline-years">
-					@foreach($years as $year=>$news)
-						{{-- <span>2019</span>
-						<span>2020</span> --}}
-						<span >{{$year}}</span>
-					@endforeach
-				</div>
-
-			</div>
-			@foreach($years as $year=>$news)
-			<div class="timeline__year">
-				<div class="timeline-carousel owl-carousel">
-					@foreach($news as $new)
-					{{-- @dd($new) --}}
+				@foreach($years_event as $year=>$events)
+				<div class="timeline__year">
+					<div class="timeline-carousel owl-carousel">
+						@foreach ($years_event[$year] as $event)
 						<div class="timeline-carousel__item">
 							<div class="timeline-carousel__date">
-								{{$new->date}}
+								{{$event->date}}
 							</div>
 							<div class="timeline-carousel__dot">
 								<span></span>
 							</div>
 							<div class="timeline-carousel__wrap">
-								<img src="{{$new->photo}}" alt="image">
-								<p class="">
-									{!!substr($new->discription_ru, 0, 200)!!}
+								<img src="img/timeline1.jpg" alt="image">
+								<p class="timeline-carousel__text">
+									{!!substr($event->discription_ru, 0, 200)!!}
 								</p>
-								<a href="{{route('event.show', $new->slug)}}" class="timeline-carousel__link">Подробнее</a>
+								<a href="{{route('event.show', $event->slug)}}" class="timeline-carousel__link">Подробнее</a>
+							</div>
+						</div>
+						@endforeach
+					</div>
+				</div>
+				@endforeach
+			</div>
+			<div class="timeline-seminar timeline-tab">
+				<div class="container">
+					<div class="timeline-years">
+						@foreach($years_seminar as $year=>$seminars)
+							<span>{{ $year }}</span>
+						@endforeach
+					</div>
+					@foreach($years_seminar as $year=>$value)
+						<div class="timeline__year">
+							<div class="timeline-carousel owl-carousel">
+								@foreach($years_seminar[$year] as $seminar)
+									<div class="timeline-carousel__item">
+										<div class="timeline-carousel__date">
+											{{$seminar->date}}
+										</div>
+										<div class="timeline-carousel__dot">
+											<span></span>
+										</div>
+										<div class="timeline-carousel__wrap">
+											<img src="{{$seminar->photo}}" alt="image">
+											<p class="">
+												{!!substr($seminar->discription_ru, 0, 200)!!}
+											</p>
+											<a href="{{route('event.show', $seminar->slug)}}" class="timeline-carousel__link">Подробнее</a>
+										</div>
+									</div>
+								@endforeach
 							</div>
 						</div>
 					@endforeach
 				</div>
 			</div>
-			@endforeach
 		</div>
 	</section>
 	<section class="consult">
@@ -894,7 +500,6 @@
 			</div>
 		</div>
 	</section>
-	{{-- @dd($partners->all()) --}}
 	<section class="partners">
 		<div class="container">
 			<h2 class="partners__title section__title-btn">
@@ -911,7 +516,6 @@
 			</div>
 		</div>
 	</section>
-	{{-- @dd($informations->all()) --}}
 	<section class="knowledge">
 		<div class="container">
 			<h2 class="knowledge__title section__title-btn">

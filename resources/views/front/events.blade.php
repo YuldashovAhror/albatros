@@ -24,496 +24,69 @@
 	<section class="timeline timeline-page">
 		<div class="container">
 			<div class="timeline-type">
-				{{-- <span class="timeline-type__event">События</span> --}}
+				<span class="timeline-type__event">События</span>
 				<span class="timeline-type__seminar">Семинары</span>
 			</div>
 		</div>
-		{{-- <div class="timeline-event timeline-tab">
+		<div class="timeline-event timeline-tab">
 			<div class="container">
 				<div class="timeline-years">
-					<span>2019</span>
-					<span>2020</span>
-					<span>2021</span>
+					@foreach($years_event as $year=>$events)
+						<span>{{ $year }}</span>
+					@endforeach
 				</div>
-				<div class="timeline__year">
-					<div class="timeline-content">
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
+				@foreach($years_event as $year=>$events)
+					<div class="timeline__year">
+						<div class="timeline-content">
+							@foreach ($years_event[$year] as $event)
+								<div class="timeline-carousel__item">
+									<div class="timeline-carousel__date">
+										{{$event->date}}
+									</div>
+									<div class="timeline-carousel__dot">
+										<span></span>
+									</div>
+									<div class="timeline-carousel__wrap">
+										<img src="{{$event->photo}}" alt="image">
+										<p class="timeline-carousel__text">
+											{!!substr($event->discription_ru, 0, 200)!!}
+										</p>
+										<a href="{{route('event.show', $event->slug)}}" class="timeline-carousel__link">Подробнее</a>
+									</div>
+								</div>
+							@endforeach
 						</div>
 					</div>
-				</div>
-				<div class="timeline__year">
-					<div class="timeline-content">
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="timeline__year">
-					<div class="timeline-content">
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				@endforeach
 			</div>
-		</div> --}}
+		</div>
 		<div class="timeline-seminar timeline-tab">
 			<div class="container">
 				<div class="timeline-years">
-					@foreach($years as $year=>$news)
-						{{-- <span>2019</span>
-						<span>2020</span> --}}
-						<span >{{$year}}</span>
+					@foreach($years_seminar as $year=>$seminars)
+						<span>{{ $year }}</span>
 					@endforeach
 				</div>
-				@foreach($years as $year=>$news)
+				@foreach($years_seminar as $year=>$value)
 				<div class="timeline__year">
 					<div class="timeline-content">
-						@foreach($news as $new)
+						@foreach($years_seminar[$year] as $seminar)
 							<div class="timeline-carousel__item">
 								<div class="timeline-carousel__date">
-									{{$new->date}}
+									{{$seminar->date}}
 								</div>
 								<div class="timeline-carousel__dot">
 									<span></span>
 								</div>
 								<div class="timeline-carousel__wrap">
-									<img src="{{$new->photo}}" alt="image">
+									<img src="{{$seminar->photo}}" alt="image">
 									<p class="timeline-carousel__text">
-										{!!substr($new->discription_ru, 0, 200)!!}
+										{!!substr($seminar->discription_ru, 0, 200)!!}
 									</p>
-									<a href="{{route('event.show',$new->slug )}}" class="timeline-carousel__link">Подробнее</a>
+									<a href="{{route('event.show',$seminar->slug )}}" class="timeline-carousel__link">Подробнее</a>
 								</div>
 							</div>
 						@endforeach
-						{{-- <div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline1.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div>
-						<div class="timeline-carousel__item">
-							<div class="timeline-carousel__date">
-								24.03.21
-							</div>
-							<div class="timeline-carousel__dot">
-								<span></span>
-							</div>
-							<div class="timeline-carousel__wrap">
-								<img src="img/timeline2.jpg" alt="image">
-								<p class="timeline-carousel__text">
-									Вебинар: COVID-19. Поствакцинальное лабораторное тестирование и биомаркеры воспаления.
-								</p>
-								<a href="#" class="timeline-carousel__link">Подробнее</a>
-							</div>
-						</div> --}}
 					</div>
 				</div>
 				@endforeach
@@ -705,7 +278,6 @@
 						</div>
 					</div>
 				</div> --}}
-
 			</div>
 		</div>
 	</section>
